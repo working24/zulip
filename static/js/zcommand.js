@@ -10,6 +10,8 @@ import {$t} from "./i18n";
 import * as night_mode from "./night_mode";
 import * as scroll_bar from "./scroll_bar";
 
+import * as message_lists from "./message_lists";
+
 /*
 
 What in the heck is a zcommand?
