@@ -32,7 +32,7 @@ What in the heck is a zcommand?
 
 function send_webhook(hook_temp_url, text) {
     var hook_url = hook_temp_url;
-    var hook_text = text.split(/\/\S*/)[1].trim();
+    var hook_text = text.split(/^\/\S*/)[1].trim();
 
     const message = message_lists.current.selected_message();
 
