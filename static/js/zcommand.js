@@ -11,6 +11,7 @@ import * as night_mode from "./night_mode";
 import * as scroll_bar from "./scroll_bar";
 
 import * as message_lists from "./message_lists";
+import * as compose_state from "./compose_state";
 
 /*
 
@@ -35,6 +36,9 @@ function send_webhook(hook_temp_url, text) {
     var hook_text = text.split(/^\/\S*/)[1].trim();
 
     const message = message_lists.current.selected_message();
+  
+    const stream_name = compose_state.stream_name();
+    const topic_name = compose_state.topic();
 
     $.ajax
     ({
@@ -47,6 +51,8 @@ function send_webhook(hook_temp_url, text) {
         data: {
           text: hook_text,
           message: message,
+          stream: stream_name,
+          topic: topic_name
         }
     })  
 }
