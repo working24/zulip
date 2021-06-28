@@ -416,6 +416,49 @@ export const slash_commands = [
         text: $t({defaultMessage: "/todo (Create a todo list)"}),
         name: "todo",
     },
+];
+
+export const slash_commands_admin = [
+    {
+        text: $t({defaultMessage: "/dark (Toggle night mode)"}),
+        name: "dark",
+    },
+    {
+        text: $t({defaultMessage: "/day (Toggle day mode)"}),
+        name: "day",
+    },
+    {
+        text: $t({defaultMessage: "/fixed-width (Toggle fixed width mode)"}),
+        name: "fixed-width",
+    },
+    {
+        text: $t({defaultMessage: "/fluid-width (Toggle fluid width mode)"}),
+        name: "fluid-width",
+    },
+    {
+        text: $t({defaultMessage: "/light (Toggle day mode)"}),
+        name: "light",
+    },
+    {
+        text: $t({defaultMessage: "/me is excited (Display action text)"}),
+        name: "me",
+    },
+    {
+        text: $t({defaultMessage: "/night (Toggle night mode)"}),
+        name: "night",
+    },
+    {
+        text: $t({defaultMessage: "/poll Where should we go to lunch today? (Create a poll)"}),
+        name: "poll",
+    },
+    {
+        text: $t({defaultMessage: "/settings (Load settings menu)"}),
+        name: "settings",
+    },
+    {
+        text: $t({defaultMessage: "/todo (Create a todo list)"}),
+        name: "todo",
+    },
     {
         text: $t({defaultMessage: "/accounting_closing_term (Summary earning and new term of tasks)"}),
         name: "accounting_closing_term",
@@ -713,8 +756,13 @@ export function get_candidates(query) {
     }
 
     function get_slash_commands_data() {
+      if (page_params.is_admin || page_params.is_moderator) {
+        const commands = slash_commands_admin;
+        return commands;
+      } else {
         const commands = slash_commands;
         return commands;
+      }
     }
 
     if (this.options.completions.slash && current_token[0] === "/") {
