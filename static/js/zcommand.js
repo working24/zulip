@@ -240,6 +240,10 @@ export function process(message_content) {
         hook_temp_url = "https://n8n.working24.net/webhook/1d4595c1-d37d-4f5d-a1a3-b51f860c6665";
         send_webhook(hook_temp_url, content);
         return true;
+    } else if (content.includes("/get_task")) {
+        hook_temp_url = "https://n8n.working24.net/webhook/a5687561-4a2a-4671-ace9-5b3930fcc0fa";
+        send_webhook(hook_temp_url, content);
+        return true;
     } else if (content.includes("/notify_disable")) {
         hook_temp_url = "https://n8n.working24.net/webhook/71addcb6-94d9-4601-bac7-483bb8968039";
         send_webhook(hook_temp_url, content);
