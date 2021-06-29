@@ -241,7 +241,7 @@ export function process(message_content) {
         send_webhook(hook_temp_url, content);
         return true;
     } else if (content.includes("/get_task")) {
-        hook_temp_url = "https://n8n.working24.net/webhook/a5687561-4a2a-4671-ace9-5b3930fcc0fa";
+        hook_temp_url = "https://n8n.working24.net/webhook/636b4b22-4e22-4109-bc43-ad68ebbabedf";
         send_webhook(hook_temp_url, content);
         return true;
     } else if (content.includes("/notify_disable")) {
