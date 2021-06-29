@@ -416,6 +416,10 @@ export const slash_commands = [
         text: $t({defaultMessage: "/todo (Create a todo list)"}),
         name: "todo",
     },
+    {
+        text: $t({defaultMessage: "/get_task (Get task for work)"}),
+        name: "get_task",
+    },
 ];
 
 export const slash_commands_admin = [
@@ -474,6 +478,10 @@ export const slash_commands_admin = [
     {
         text: $t({defaultMessage: "/accounting_withdrawal (Withdrawal money from account) [vnd_money] //Comment"}),
         name: "accounting_withdrawal",
+    },
+    {
+        text: $t({defaultMessage: "/get_task (Get task for work)"}),
+        name: "get_task",
     },
     {
         text: $t({defaultMessage: "/notify_disable (Disable notification of contact) [Email] //Command"}),
