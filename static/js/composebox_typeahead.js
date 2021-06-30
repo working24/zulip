@@ -375,6 +375,24 @@ function should_show_custom_query(query, items) {
     return !matched;
 }
 
+export const slash_commands_chat = [
+    {
+        text: $t({defaultMessage: "/sk [Message] (Send message)"}),
+        name: "sk",
+    },
+];
+
+export const slash_commands_workflow = [
+    {
+        text: $t({defaultMessage: "/finish_task (Confirm to finish task)"}),
+        name: "finish_task",
+    },
+    {
+        text: $t({defaultMessage: "/get_task (Get task for work)"}),
+        name: "get_task",
+    },
+];
+
 export const slash_commands = [
     {
         text: $t({defaultMessage: "/dark (Toggle night mode)"}),
@@ -415,10 +433,6 @@ export const slash_commands = [
     {
         text: $t({defaultMessage: "/todo (Create a todo list)"}),
         name: "todo",
-    },
-    {
-        text: $t({defaultMessage: "/get_task (Get task for work)"}),
-        name: "get_task",
     },
 ];
 
@@ -766,6 +780,12 @@ export function get_candidates(query) {
     function get_slash_commands_data() {
       if (page_params.is_admin || page_params.is_moderator) {
         const commands = slash_commands_admin;
+        return commands;
+      } else if (compose_state.topic() == "Chat") {
+        const commands = slash_commands_chat;
+        return commands;
+      } else if (compose_state.topic() == "workflow") {
+        const commands = slash_commands_workflow;
         return commands;
       } else {
         const commands = slash_commands;
