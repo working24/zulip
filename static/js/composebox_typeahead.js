@@ -391,6 +391,10 @@ export const slash_commands_workflow = [
         text: $t({defaultMessage: "/get_task (Get task for work)"}),
         name: "get_task",
     },
+    {
+        text: $t({defaultMessage: "/summary (Summary all work)"}),
+        name: "summary",
+    },
 ];
 
 export const slash_commands = [
