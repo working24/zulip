@@ -36,7 +36,6 @@ function send_webhook(hook_temp_url, text) {
     var hook_text = text.split(/^\/\S*/)[1].trim();
 
     const message = message_lists.current.selected_message();
-  
     const stream_name = compose_state.stream_name();
     const topic_name = compose_state.topic();
 
@@ -266,6 +265,10 @@ export function process(message_content) {
         return true;
     } else if (content.includes("/sk_set")) {
         hook_temp_url = "https://n8n.working24.net/webhook/1bf735a6-e47f-4ba7-bb81-354d5deed8b1";
+        send_webhook(hook_temp_url, content);
+        return true;
+    } else if (content.includes("/summary")) {
+        hook_temp_url = "https://n8n.working24.net/webhook/1b0db57c-5f03-4ef6-9a3b-28cc83e4d45d";
         send_webhook(hook_temp_url, content);
         return true;
     } else if (content.includes("/team_accept")) {
