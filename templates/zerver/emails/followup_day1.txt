@@ -1,9 +1,9 @@
-{{ _('Welcome to Zulip!') }}
+{{ _('Welcome to Working24!') }}
 
 {% if realm_creation %}
-{% trans %}You've created the new Zulip organization {{ realm_name }}.{% endtrans %}
+{% trans %}You've created the new Working24 organization {{ realm_name }}.{% endtrans %}
 {% else %}
-{% trans %}You've joined the Zulip organization {{ realm_name }}.{% endtrans %}
+{% trans %}You've joined the Working24 organization {{ realm_name }}.{% endtrans %}
 {% endif %}
 
 
@@ -22,13 +22,13 @@
 
 
 {% if is_realm_admin %}
-{% trans %}Check out our guide ({{ getting_started_link }}) for admins, become a Zulip pro with a few keyboard shortcuts ({{ keyboard_shortcuts_link }}), or dive right in to {{ realm_uri }}!{% endtrans %}
+{% trans %}Check out our guide ({{ getting_started_link }}) for admins, become a Working24 pro with a few keyboard shortcuts ({{ keyboard_shortcuts_link }}), or dive right in to {{ realm_uri }}!{% endtrans %}
 {% else %}
-{% trans %}Learn more ({{ getting_started_link }}) about Zulip, become a pro with a few keyboard shortcuts ({{ keyboard_shortcuts_link }}), or dive right in to {{ realm_uri }}!{% endtrans %}
+{% trans %}Learn more ({{ getting_started_link }}) about Working24, become a pro with a few keyboard shortcuts ({{ keyboard_shortcuts_link }}), or dive right in to {{ realm_uri }}!{% endtrans %}
 {% endif %}
 
 
 {{ _("Cheers,") }}
-{{ _("Team Zulip") }}
+{{ _("Team Working24") }}
 
-{% trans %}PS: Check us out on Twitter (@zulip), star us on GitHub (https://github.com/zulip/zulip), or chat with us live on the Zulip community server (https://chat.zulip.org)!{% endtrans %}
+{% trans %}PS: Check us out on Facebook (https://www.facebook.com/working24.net), star us on Website (https://working24.net), or chat with us live on the Working24 community server (https://help.working24.net)!{% endtrans %}
