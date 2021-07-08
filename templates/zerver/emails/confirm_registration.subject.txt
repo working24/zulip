@@ -1,5 +1,5 @@
 {% if create_realm %}
-{{ _("Create your Zulip organization") }}
+{{ _("Create your Working24 organization") }}
 {% else %}
-{{ _("Activate your Zulip account") }}
+{{ _("Activate your Working24 account") }}
 {% endif %}

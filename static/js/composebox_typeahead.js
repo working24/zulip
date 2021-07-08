@@ -506,6 +506,10 @@ export const slash_commands_admin = [
         name: "notify_disable",
     },
     {
+        text: $t({defaultMessage: "/project_activate (Activate project)"}),
+        name: "project_activate",
+    },
+    {
         text: $t({defaultMessage: "/project_cancel (Cancel project) [project_id] //Reason of cancellation"}),
         name: "project_cancel",
     },
