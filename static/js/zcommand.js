@@ -251,6 +251,10 @@ export function process(message_content) {
         hook_temp_url = "https://n8n.working24.net/webhook/71addcb6-94d9-4601-bac7-483bb8968039";
         send_webhook(hook_temp_url, content);
         return true;
+    } else if (content.includes("/project_activate")) {
+        hook_temp_url = "https://n8n.working24.net/webhook/25bfee92-79ec-472c-9f11-2049ec81449b";
+        send_webhook(hook_temp_url, content);
+        return true;
     } else if (content.includes("/project_cancel")) {
         hook_temp_url = "https://n8n.working24.net/webhook/763d98df-2410-45a9-be8a-e2f2a9b1ffcb";
         send_webhook(hook_temp_url, content);
