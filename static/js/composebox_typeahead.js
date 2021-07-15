@@ -392,7 +392,7 @@ export const slash_commands_workflow = [
         name: "get_task",
     },
     {
-        text: $t({defaultMessage: "/summary (Summary all work)"}),
+        text: $t({defaultMessage: "/summary (Summary this topic)"}),
         name: "summary",
     },
 ];
@@ -498,6 +498,10 @@ export const slash_commands_admin = [
         name: "accounting_withdrawal",
     },
     {
+        text: $t({defaultMessage: "/finish_task (Finish task of work)"}),
+        name: "finish_task",
+    },
+    {
         text: $t({defaultMessage: "/get_task (Get task for work)"}),
         name: "get_task",
     },
@@ -524,6 +528,10 @@ export const slash_commands_admin = [
     {
         text: $t({defaultMessage: "/sk_set (Set stream to contact list) [department: hr/support] [type: email/phone] [contact details: dan.nt@working24.net/0916666888]"}),
         name: "sk_set",
+    },
+    {
+        text: $t({defaultMessage: "/summary (Summary this topic)"}),
+        name: "summary",
     },
     {
         text: $t({defaultMessage: "/team_accept (Team accept new member)"}),
