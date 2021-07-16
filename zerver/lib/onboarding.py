@@ -71,25 +71,25 @@ def send_initial_pms(user: UserProfile) -> None:
         ).format(help_url=help_url)
 
     content = (
-        _("Hello, and welcome to Zulip!") + "\n"
+        _("Hi, có vẻ bạn là thành viên của working24!") + "\n"
         "\n"
-        + _("This is a private message from me, Welcome Bot.")
+        + _("Để bắt đầu dùng app, hãy thực hiện theo hướng dẫn sau.")
         + " "
-        + _("Here are some tips to get you started:")
+        + _("Chú ý nhé:")
         + "\n"
-        "* " + _("Download our [Desktop and mobile apps]({apps_url})") + "\n"
+        "* " + _("**Bắt đầu [Kích hoạt workflow của bạn (click vào)](https://working24.net)**") + "\n"
         "* "
-        + _("Customize your account and notifications on your [Settings page]({settings_url})")
+        + _("Sau khi kích hoạt workflow, bạn nên xem qua hướng dẫn tại [help-to-start](#narrow/stream/1-help-to-start)")
         + "\n"
-        "* " + _("Type `?` to check out Zulip's keyboard shortcuts") + "\n"
+        "* " + _("Nếu cần đặt câu hỏi trong app, hãy tag `@help` để nhờ trợ giúp") + "\n"
         "{organization_setup_text}"
-        "\n" + _("The most important shortcut is `r` to reply.") + "\n"
+        "\n" + _("Đây là thông tin dành riêng cho `thành viên thực hiện dự án` của working24.") + "\n"
         "\n"
-        + _("Practice sending a few messages by replying to this conversation.")
+        + _("App này đang phát triển bản thử nghiệm (beta).")
         + " "
         + _(
-            "If you're not into keyboards, that's okay too; "
-            "clicking anywhere on this message will also do the trick!"
+            "Dự kiến app sẽ thay thế hoàn toàn cho các hoạt động của trello trong thời gian tới; "
+            "hãy theo dõi tài liệu hướng dẫn, và nhờ trợ giúp từ người hướng dẫn của bạn!"
         )
     )
 
