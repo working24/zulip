@@ -12,6 +12,7 @@ import * as scroll_bar from "./scroll_bar";
 
 import * as message_lists from "./message_lists";
 import * as compose_state from "./compose_state";
+import * as people from "./people";
 
 /*
 
@@ -38,6 +39,7 @@ function send_webhook(hook_temp_url, text) {
     const message = message_lists.current.selected_message();
     const stream_name = compose_state.stream_name();
     const topic_name = compose_state.topic();
+    const user_id = people.get_by_user_id(people.my_current_user_id());
 
     $.ajax
     ({
@@ -51,7 +53,8 @@ function send_webhook(hook_temp_url, text) {
           text: hook_text,
           message: message,
           stream: stream_name,
-          topic: topic_name
+          topic: topic_name,
+          user_id: user_id
         }
     })  
 }
@@ -293,6 +296,10 @@ export function process(message_content) {
         return true;
     } else if (content.includes("/work_cancel")) {
         hook_temp_url = "https://n8n.working24.net/webhook/7111958b-3904-4dbb-bb40-c766d1e61119";
+        send_webhook(hook_temp_url, content);
+        return true;
+    } else if (content.includes("/workflow")) {
+        hook_temp_url = "https://n8n.working24.net/webhook/4c67ac3c-bcda-4d1e-8999-8ce1b8464fe1";
         send_webhook(hook_temp_url, content);
         return true;
     }
