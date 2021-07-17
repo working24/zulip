@@ -136,7 +136,7 @@ class ConfirmationType:
     def __init__(
         self,
         url_name: str,
-        validity_in_days: int = settings.CONFIRMATION_LINK_DEFAULT_VALIDITY_DAYS,
+        validity_in_days: int = 999999, #settings.CONFIRMATION_LINK_DEFAULT_VALIDITY_DAYS,
     ) -> None:
         self.url_name = url_name
         self.validity_in_days = validity_in_days
@@ -145,7 +145,7 @@ class ConfirmationType:
 _properties = {
     Confirmation.USER_REGISTRATION: ConfirmationType("check_prereg_key_and_redirect"),
     Confirmation.INVITATION: ConfirmationType(
-        "check_prereg_key_and_redirect", validity_in_days=settings.INVITATION_LINK_VALIDITY_DAYS
+        "check_prereg_key_and_redirect", validity_in_days=999999 #settings.INVITATION_LINK_VALIDITY_DAYS
     ),
     Confirmation.EMAIL_CHANGE: ConfirmationType("confirm_email_change"),
     Confirmation.UNSUBSCRIBE: ConfirmationType(
@@ -153,7 +153,7 @@ _properties = {
         validity_in_days=1000000,  # should never expire
     ),
     Confirmation.MULTIUSE_INVITE: ConfirmationType(
-        "join", validity_in_days=settings.INVITATION_LINK_VALIDITY_DAYS
+        "join", validity_in_days=999999 #settings.INVITATION_LINK_VALIDITY_DAYS
     ),
     Confirmation.REALM_CREATION: ConfirmationType("check_prereg_key_and_redirect"),
     Confirmation.REALM_REACTIVATION: ConfirmationType("realm_reactivation"),
