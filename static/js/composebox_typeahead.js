@@ -438,6 +438,10 @@ export const slash_commands = [
         text: $t({defaultMessage: "/todo (Create a todo list)"}),
         name: "todo",
     },
+    {
+        text: $t({defaultMessage: "/workflow (Activate workflow for member)"}),
+        name: "workflow",
+    },
 ];
 
 export const slash_commands_admin = [
