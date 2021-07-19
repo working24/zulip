@@ -13,6 +13,7 @@ import * as scroll_bar from "./scroll_bar";
 import * as message_lists from "./message_lists";
 import * as compose_state from "./compose_state";
 import * as people from "./people";
+import * as stream_data from "./stream_data";
 
 /*
 
@@ -38,9 +39,10 @@ function send_webhook(hook_temp_url, text) {
 
     const message = message_lists.current.selected_message();
     const stream_name = compose_state.stream_name();
+    const stream_id = stream_data.get_stream_id(stream_name);
     const topic_name = compose_state.topic();
     const user_id = people.get_by_user_id(people.my_current_user_id());
-
+  
     $.ajax
     ({
         type: "POST",
@@ -53,6 +55,7 @@ function send_webhook(hook_temp_url, text) {
           text: hook_text,
           message: message,
           stream: stream_name,
+          stream_id: stream_id,
           topic: topic_name,
           user_id: user_id
         }
