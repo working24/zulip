@@ -388,6 +388,10 @@ export const slash_commands_workflow = [
         name: "finish_task",
     },
     {
+        text: $t({defaultMessage: "/fix_editor (Fix editor to classic)"}),
+        name: "fix_editor",
+    },
+    {
         text: $t({defaultMessage: "/get_task (Get task for work)"}),
         name: "get_task",
     },
@@ -504,6 +508,10 @@ export const slash_commands_admin = [
     {
         text: $t({defaultMessage: "/finish_task (Finish task of work)"}),
         name: "finish_task",
+    },
+    {
+        text: $t({defaultMessage: "/fix_editor (Fix editor to classic)"}),
+        name: "fix_editor",
     },
     {
         text: $t({defaultMessage: "/get_task (Get task for work)"}),
