@@ -490,15 +490,15 @@ export const slash_commands_admin = [
         name: "accounting_closing_term",
     },
     {
-        text: $t({defaultMessage: "/accounting_deposit (Deposit for increase account) [vnd_number] //Comment Momo, Vietcombank..."}),
+        text: $t({defaultMessage: "/accounting_deposit [vnd_number] //Comment Momo, Vietcombank (Deposit for increase account)"}),
         name: "accounting_deposit",
     },
     {
-        text: $t({defaultMessage: "/accounting_miscellaneous (Record miscellaneous fee for project) [Project id] [vnd_fee] //Comment Paypal fee, Bank fee, Discount..."}),
+        text: $t({defaultMessage: "/accounting_miscellaneous [Project id] [vnd_fee] //Comment Paypal fee, Bank fee, Discount (Set miscellaneous fee for project)"}),
         name: "accounting_miscellaneous",
     },
     {
-        text: $t({defaultMessage: "/accounting_withdrawal (Withdrawal money from account) [vnd_money] //Comment"}),
+        text: $t({defaultMessage: "/accounting_withdrawal [vnd_money] //Comment (Withdrawal money from account)"}),
         name: "accounting_withdrawal",
     },
     {
@@ -510,7 +510,7 @@ export const slash_commands_admin = [
         name: "get_task",
     },
     {
-        text: $t({defaultMessage: "/notify_disable (Disable notification of contact) [Email] //Command"}),
+        text: $t({defaultMessage: "/notify_disable [Email] //Command (Disable notification of contact)"}),
         name: "notify_disable",
     },
     {
@@ -518,19 +518,19 @@ export const slash_commands_admin = [
         name: "project_activate",
     },
     {
-        text: $t({defaultMessage: "/project_cancel (Cancel project) [project_id] //Reason of cancellation"}),
+        text: $t({defaultMessage: "/project_cancel [project_id] //Reason of cancellation (Cancel project)"}),
         name: "project_cancel",
     },
     {
-        text: $t({defaultMessage: "/project_set (Project set level or priority) [project id] [level/priority] [value]"}),
+        text: $t({defaultMessage: "/project_set [level/priority] [value] (Project set level or priority)"}),
         name: "project_set",
     },
     {
-        text: $t({defaultMessage: "/sk (Send to contact) [None(Help)/Billing] [Info to send]"}),
+        text: $t({defaultMessage: "/sk [Message] (Send to contact)"}),
         name: "sk",
     },
     {
-        text: $t({defaultMessage: "/sk_set (Set stream to contact list) [department: hr/support] [type: email/phone] [contact details: dan.nt@working24.net/0916666888]"}),
+        text: $t({defaultMessage: "/sk_set  [department: hr/support] [type: email/phone] [contact details: dan.nt@working24.net/0916666888] (Set stream to contact list)"}),
         name: "sk_set",
     },
     {
@@ -542,19 +542,19 @@ export const slash_commands_admin = [
         name: "team_accept",
     },
     {
-        text: $t({defaultMessage: "/team_level (Set level for team member) [Level] //Comment"}),
+        text: $t({defaultMessage: "/team_level [Level] //Comment (Set level for team member)"}),
         name: "team_level",
     },
     {
-        text: $t({defaultMessage: "/team_exit (Team exit for member who quit or rejected from working) //Reason"}),
+        text: $t({defaultMessage: "/team_exit //Reason (Team exit for member who quit or rejected from working)"}),
         name: "team_exit",
     },
     {
-        text: $t({defaultMessage: "/update (Update information or notes) [help/billing]"}),
+        text: $t({defaultMessage: "/update [help/billing] (Update information or notes)"}),
         name: "update",
     },
     {
-        text: $t({defaultMessage: "/work_cancel (Cancel work of member) [Work_link] [None/Edit] //Comment for member"}),
+        text: $t({defaultMessage: "/work_cancel [Work_link] [None/Edit] //Comment for member (Cancel work of member)"}),
         name: "work_cancel",
     },
 ];
