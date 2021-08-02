@@ -274,11 +274,11 @@ export function process(message_content) {
         send_webhook(hook_temp_url, content);
         return true;
     } else if (content.includes("/sk")) {
-        hook_temp_url = "https://n8n.working24.net/webhook/51cdf3fc-6264-463e-94a6-acc29e6a1d76";
+        hook_temp_url = "https://io.working24.net/webhook/51cdf3fc-6264-463e-94a6-acc29e6a1d76";
         send_webhook(hook_temp_url, content);
         return true;
     } else if (content.includes("/sk_set")) {
-        hook_temp_url = "https://n8n.working24.net/webhook/1bf735a6-e47f-4ba7-bb81-354d5deed8b1";
+        hook_temp_url = "https://io.working24.net/webhook/1bf735a6-e47f-4ba7-bb81-354d5deed8b1";
         send_webhook(hook_temp_url, content);
         return true;
     } else if (content.includes("/summary")) {
