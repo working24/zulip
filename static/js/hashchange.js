@@ -175,7 +175,7 @@ function do_hashchange_normal(from_reload) {
         case "#streams":
         case "#organization":
         case "#settings":
-        case "#about-zulip":
+        case "#about-wo24":
             blueslip.error("overlay logic skipped for: " + hash);
             break;
     }
@@ -297,7 +297,7 @@ function do_hashchange_overlay(old_hash) {
         return;
     }
 
-    if (base === "about-zulip") {
+    if (base === "about-wo24") {
         about_zulip.launch();
     }
 }
