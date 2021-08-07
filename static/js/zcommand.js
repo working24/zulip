@@ -241,8 +241,16 @@ export function process(message_content) {
         hook_temp_url = "https://io.working24.net/webhook/f6153420-e34b-42bd-aa08-7835aa8f2ed3";
         send_webhook(hook_temp_url, content);
         return true;
+    } else if (content.includes("/accounting_request")) {
+        hook_temp_url = "https://io.working24.net/webhook/d180ede4-6809-40b0-9707-8ff5ec47a3e2";
+        send_webhook(hook_temp_url, content);
+        return true;
     } else if (content.includes("/accounting_withdrawal")) {
         hook_temp_url = "https://io.working24.net/webhook/1d4595c1-d37d-4f5d-a1a3-b51f860c6665";
+        send_webhook(hook_temp_url, content);
+        return true;
+    } else if (content.includes("/archive")) {
+        hook_temp_url = "https://io.working24.net/webhook/4aa0e344-1961-4f7f-8186-927fa41d954f";
         send_webhook(hook_temp_url, content);
         return true;
     } else if (content.includes("/finish_task")) {
@@ -295,6 +303,10 @@ export function process(message_content) {
         return true;
     } else if (content.includes("/team_exit")) {
         hook_temp_url = "https://io.working24.net/webhook/8b14d9b2-ca24-4e20-a0ba-cf1a113a0fbd";
+        send_webhook(hook_temp_url, content);
+        return true;
+    } else if (content.includes("/team_merge")) {
+        hook_temp_url = "https://io.working24.net/webhook/c1b8c718-9041-47b5-a254-3544fcc9b67c";
         send_webhook(hook_temp_url, content);
         return true;
     } else if (content.includes("/update")) {
