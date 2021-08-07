@@ -502,8 +502,16 @@ export const slash_commands_admin = [
         name: "accounting_miscellaneous",
     },
     {
+        text: $t({defaultMessage: "/accounting_request (Request for payment)"}),
+        name: "accounting_request",
+    },
+    {
         text: $t({defaultMessage: "/accounting_withdrawal [vnd_money] //Comment (Withdrawal money from account)"}),
         name: "accounting_withdrawal",
+    },
+    {
+        text: $t({defaultMessage: "/archive (Close this stream)"}),
+        name: "archive",
     },
     {
         text: $t({defaultMessage: "/finish_task (Finish task of work)"}),
@@ -556,6 +564,10 @@ export const slash_commands_admin = [
     {
         text: $t({defaultMessage: "/team_exit //Reason (Team exit for member who quit or rejected from working)"}),
         name: "team_exit",
+    },
+    {
+        text: $t({defaultMessage: "/team_merge [#New stream] (Merge stream, account, email to new one for member)"}),
+        name: "team_merge",
     },
     {
         text: $t({defaultMessage: "/update [help/billing] (Update information or notes)"}),
