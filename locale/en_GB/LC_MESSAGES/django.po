@@ -1155,7 +1155,7 @@ msgstr "Log out"
 
 #: templates/zerver/app/navbar_alerts.html:4
 msgid ""
-"Zulip needs your permission to\n"
+"Working24 needs your permission to\n"
 "            <a class=\"request-desktop-notifications alert-link\" role=\"button\" tabindex=0>enable desktop notifications.</a>\n"
 "            "
 msgstr "Zulip needs your permission to\n            <a class=\"request-desktop-notifications alert-link\" role=\"button\" tabindex=0>enable desktop notifications.</a>\n            "
