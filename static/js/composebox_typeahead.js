@@ -578,6 +578,10 @@ export const slash_commands_admin = [
         name: "update",
     },
     {
+        text: $t({defaultMessage: "/webpage_activate (Activate webpage)"}),
+        name: "webpage_activate",
+    },
+    {
         text: $t({defaultMessage: "/work_cancel [Work_link] [None/Edit] //Comment for member (Cancel work of member)"}),
         name: "work_cancel",
     },
