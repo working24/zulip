@@ -829,10 +829,10 @@ export function get_candidates(query) {
       if (page_params.is_admin || page_params.is_moderator) {
         const commands = slash_commands_admin;
         return commands;
-      } else if (compose_state.topic() == "Chat") {
+      } else if (compose_state.topic() == "Chat" && !page_params.is_guest) {
         const commands = slash_commands_chat;
         return commands;
-      } else if (compose_state.topic() == "workflow") {
+      } else if (compose_state.topic() == "workflow" && !page_params.is_guest) {
         const commands = slash_commands_workflow;
         return commands;
       } else {
