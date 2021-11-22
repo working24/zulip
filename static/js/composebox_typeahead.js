@@ -407,44 +407,23 @@ export const slash_commands = [
         name: "dark",
     },
     {
-        text: $t({defaultMessage: "/day (Toggle day mode)"}),
-        name: "day",
-    },
-    {
-        text: $t({defaultMessage: "/fixed-width (Toggle fixed width mode)"}),
-        name: "fixed-width",
-    },
-    {
-        text: $t({defaultMessage: "/fluid-width (Toggle fluid width mode)"}),
-        name: "fluid-width",
-    },
-    {
-        text: $t({defaultMessage: "/light (Toggle day mode)"}),
-        name: "light",
-    },
-    {
-        text: $t({defaultMessage: "/me is excited (Display action text)"}),
-        name: "me",
-    },
-    {
         text: $t({defaultMessage: "/night (Toggle night mode)"}),
         name: "night",
     },
     {
-        text: $t({defaultMessage: "/poll Where should we go to lunch today? (Create a poll)"}),
-        name: "poll",
-    },
-    {
-        text: $t({defaultMessage: "/settings (Load settings menu)"}),
-        name: "settings",
-    },
-    {
-        text: $t({defaultMessage: "/todo (Create a todo list)"}),
-        name: "todo",
-    },
-    {
         text: $t({defaultMessage: "/workflow (Activate workflow for member)"}),
         name: "workflow",
+    },
+];
+
+export const slash_commands_keyword = [
+    {
+        text: $t({defaultMessage: "/keyword_link [-incorrect -update] (Set keyword link)"}),
+        name: "keyword_link",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_seed [-add -remove -update] (Set keyword seed)"}),
+        name: "keyword_seed",
     },
 ];
 
@@ -584,6 +563,21 @@ export const slash_commands_admin = [
     {
         text: $t({defaultMessage: "/work_cancel [Work_link] [None/Edit] //Comment for member (Cancel work of member)"}),
         name: "work_cancel",
+    },
+];
+
+export const slash_commands_admin_keyword = [
+    {
+        text: $t({defaultMessage: "/keyword_link [-incorrect -update] (Set keyword link)"}),
+        name: "keyword_link",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_seed [-add -remove -update] (Set keyword seed)"}),
+        name: "keyword_seed",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_submit [-seed -keywords -negative] (Submit keywords)"}),
+        name: "keyword_submit",
     },
 ];
 
@@ -826,11 +820,17 @@ export function get_candidates(query) {
     }
 
     function get_slash_commands_data() {
-      if (page_params.is_admin || page_params.is_moderator) {
+      if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic() == "Keywords") {
+        const commands = slash_commands_admin_keyword;
+        return commands;
+      } else if (page_params.is_admin || page_params.is_moderator) {
         const commands = slash_commands_admin;
         return commands;
       } else if (compose_state.topic() == "Chat" && !page_params.is_guest) {
         const commands = slash_commands_chat;
+        return commands;
+      } else if (compose_state.topic() == "Keywords" && !page_params.is_guest) {
+        const commands = slash_commands_keyword;
         return commands;
       } else if (compose_state.topic() == "workflow" && !page_params.is_guest) {
         const commands = slash_commands_workflow;
