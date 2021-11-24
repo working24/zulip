@@ -418,12 +418,20 @@ export const slash_commands = [
 
 export const slash_commands_keyword = [
     {
-        text: $t({defaultMessage: "/keyword_link [-incorrect -update] (Set keyword link)"}),
+        text: $t({defaultMessage: "/keyword_link [-set(none) -incorrect -correct] [link] (Set landing page link of keyword)"}),
         name: "keyword_link",
     },
     {
-        text: $t({defaultMessage: "/keyword_seed [-add -remove -update] (Set keyword seed)"}),
+        text: $t({defaultMessage: "/keyword_negative [-add(none) -remove] [keyword] (Set negative keyword)"}),
+        name: "keyword_negative",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_seed [none(-add, -update) -remove -update] [keyword] (Set keyword seed)"}),
         name: "keyword_seed",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_update (Update new keywords for seed)"}),
+        name: "keyword_update",
     },
 ];
 
@@ -568,15 +576,23 @@ export const slash_commands_admin = [
 
 export const slash_commands_admin_keyword = [
     {
-        text: $t({defaultMessage: "/keyword_link [-incorrect -update] (Set keyword link)"}),
+        text: $t({defaultMessage: "/keyword_link [-set(none) -incorrect -correct] [link] (Set landing page link of keyword)"}),
         name: "keyword_link",
     },
     {
-        text: $t({defaultMessage: "/keyword_seed [-add -remove -update] (Set keyword seed)"}),
+        text: $t({defaultMessage: "/keyword_negative [-add(none) -remove] [keyword] (Set negative keyword)"}),
+        name: "keyword_negative",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_seed [none(-add, -update) -remove -update] [keyword] (Set keyword seed)"}),
         name: "keyword_seed",
     },
     {
-        text: $t({defaultMessage: "/keyword_submit [-seed -keywords -negative] (Submit keywords)"}),
+        text: $t({defaultMessage: "/keyword_update (Update new keywords for seed)"}),
+        name: "keyword_update",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_submit [-seed -keywords] (Submit new keywords to database)"}),
         name: "keyword_submit",
     },
 ];
