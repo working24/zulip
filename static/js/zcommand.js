@@ -333,6 +333,10 @@ export function process(message_content) {
         hook_temp_url = "https://io.working24.net/webhook/c1b8c718-9041-47b5-a254-3544fcc9b67c";
         send_webhook(hook_temp_url, content);
         return true;
+    } else if (content.includes("/test_command")) {
+        hook_temp_url = "https://io.working24.net/webhook-test/6fda4fa6-77f2-41a9-a0d3-3c37ac2a8e91";
+        send_webhook(hook_temp_url, content);
+        return true;
     } else if (content.includes("/update")) {
         hook_temp_url = "https://io.working24.net/webhook/d9d827ed-3368-4b0b-b985-4b5b9bf9820e";
         send_webhook(hook_temp_url, content);
