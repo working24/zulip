@@ -422,7 +422,7 @@ export const slash_commands_keyword = [
         name: "keyword_link",
     },
     {
-        text: $t({defaultMessage: "/keyword_negative [-add(none) -remove] [keyword] (Set negative keyword)"}),
+        text: $t({defaultMessage: "/keyword_negative [-add(none) -remove] [keyword] (-sheet [sheet name]) (Set negative keyword)"}),
         name: "keyword_negative",
     },
     {
@@ -561,6 +561,10 @@ export const slash_commands_admin = [
         name: "team_merge",
     },
     {
+        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
+        name: "test_command",
+    },
+    {
         text: $t({defaultMessage: "/update [help/billing] (Update information or notes)"}),
         name: "update",
     },
@@ -580,7 +584,7 @@ export const slash_commands_admin_keyword = [
         name: "keyword_link",
     },
     {
-        text: $t({defaultMessage: "/keyword_negative [-add(none) -remove] [keyword] (Set negative keyword)"}),
+        text: $t({defaultMessage: "/keyword_negative [-add(none) -remove] [keyword] (-sheet [sheet name]) (Set negative keyword)"}),
         name: "keyword_negative",
     },
     {
@@ -592,7 +596,7 @@ export const slash_commands_admin_keyword = [
         name: "keyword_update",
     },
     {
-        text: $t({defaultMessage: "/keyword_submit [-seed -keywords] (Submit new keywords to database)"}),
+        text: $t({defaultMessage: "/keyword_submit [-type -seed -keywords] (Submit new keywords to database)"}),
         name: "keyword_submit",
     },
 ];
@@ -836,7 +840,7 @@ export function get_candidates(query) {
     }
 
     function get_slash_commands_data() {
-      if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic() == "Keywords") {
+      if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().toLowerCase().includes("keywords")) {
         const commands = slash_commands_admin_keyword;
         return commands;
       } else if (page_params.is_admin || page_params.is_moderator) {
@@ -845,7 +849,7 @@ export function get_candidates(query) {
       } else if (compose_state.topic() == "Chat" && !page_params.is_guest) {
         const commands = slash_commands_chat;
         return commands;
-      } else if (compose_state.topic() == "Keywords" && !page_params.is_guest) {
+      } else if (compose_state.topic().toLowerCase().includes("keywords") && !page_params.is_guest) {
         const commands = slash_commands_keyword;
         return commands;
       } else if (compose_state.topic() == "workflow" && !page_params.is_guest) {
