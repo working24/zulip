@@ -418,19 +418,19 @@ export const slash_commands = [
 
 export const slash_commands_keyword = [
     {
-        text: $t({defaultMessage: "/keyword_link [-set(none) -incorrect -correct] [link] (Set landing page link of keyword)"}),
+        text: $t({defaultMessage: "/keyword_link [keyword*] [link*] (Set page link of keyword)"}),
         name: "keyword_link",
     },
     {
-        text: $t({defaultMessage: "/keyword_negative [-add(none) -remove] [keyword] (-sheet [sheet name]) (Set negative keyword)"}),
+        text: $t({defaultMessage: "/keyword_negative [keyword*] (Set negative keyword)"}),
         name: "keyword_negative",
     },
     {
-        text: $t({defaultMessage: "/keyword_seed [none(-add, -update) -remove -update] [keyword] (Set keyword seed)"}),
+        text: $t({defaultMessage: "/keyword_seed [type] [keyword*] (Set keyword seed for SMART)"}),
         name: "keyword_seed",
     },
     {
-        text: $t({defaultMessage: "/keyword_update (Update new keywords for seed)"}),
+        text: $t({defaultMessage: "/keyword_update (Update new keywords list for SMART)"}),
         name: "keyword_update",
     },
 ];
@@ -580,24 +580,24 @@ export const slash_commands_admin = [
 
 export const slash_commands_admin_keyword = [
     {
-        text: $t({defaultMessage: "/keyword_link [-set(none) -incorrect -correct] [link] (Set landing page link of keyword)"}),
+        text: $t({defaultMessage: "/keyword_link [keyword*] [link*] (Set page link of keyword)"}),
         name: "keyword_link",
     },
     {
-        text: $t({defaultMessage: "/keyword_negative [-add(none) -remove] [keyword] (-sheet [sheet name]) (Set negative keyword)"}),
+        text: $t({defaultMessage: "/keyword_negative [keyword*] (Set negative keyword)"}),
         name: "keyword_negative",
     },
     {
-        text: $t({defaultMessage: "/keyword_seed [none(-add, -update) -remove -update] [keyword] (Set keyword seed)"}),
+        text: $t({defaultMessage: "/keyword_seed /keyword_seed [type] [keyword*] (Set keyword seed for SMART)"}),
         name: "keyword_seed",
     },
     {
-        text: $t({defaultMessage: "/keyword_update (Update new keywords for seed)"}),
-        name: "keyword_update",
+        text: $t({defaultMessage: "/keyword_submit -type* [type*] -seed* [seed keyword*] -keywords* [keywords_list*] (Submit new keywords to database)"}),
+        name: "keyword_submit",
     },
     {
-        text: $t({defaultMessage: "/keyword_submit [-type -seed -keywords] (Submit new keywords to database)"}),
-        name: "keyword_submit",
+        text: $t({defaultMessage: "/keyword_update (Update new keywords list for SMART)"}),
+        name: "keyword_update",
     },
 ];
 
@@ -840,7 +840,7 @@ export function get_candidates(query) {
     }
 
     function get_slash_commands_data() {
-      if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().toLowerCase().includes("keywords")) {
+      if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^Kw-.*__.*")) {
         const commands = slash_commands_admin_keyword;
         return commands;
       } else if (page_params.is_admin || page_params.is_moderator) {
@@ -849,7 +849,7 @@ export function get_candidates(query) {
       } else if (compose_state.topic() == "Chat" && !page_params.is_guest) {
         const commands = slash_commands_chat;
         return commands;
-      } else if (compose_state.topic().toLowerCase().includes("keywords") && !page_params.is_guest) {
+      } else if (compose_state.topic().match("^Kw-.*__.*") && !page_params.is_guest) {
         const commands = slash_commands_keyword;
         return commands;
       } else if (compose_state.topic() == "workflow" && !page_params.is_guest) {
