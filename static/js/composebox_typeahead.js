@@ -588,7 +588,7 @@ export const slash_commands_admin_keyword = [
         name: "keyword_negative",
     },
     {
-        text: $t({defaultMessage: "/keyword_seed /keyword_seed [type] [keyword*] (Set keyword seed for SMART)"}),
+        text: $t({defaultMessage: "/keyword_seed [keyword*] -type [type] (Set keyword seed for SMART)"}),
         name: "keyword_seed",
     },
     {
