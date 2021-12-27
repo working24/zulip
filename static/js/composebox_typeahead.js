@@ -513,6 +513,18 @@ export const slash_commands_admin = [
         name: "get_task",
     },
     {
+        text: $t({defaultMessage: "/new_content (Create new content request)"}),
+        name: "new_content",
+    },
+    {
+        text: $t({defaultMessage: "/new_smart (Create new smart sheet request)"}),
+        name: "new_smart",
+    },
+    {
+        text: $t({defaultMessage: "/new_webpage (Create new webpage request)"}),
+        name: "new_webpage",
+    },
+    {
         text: $t({defaultMessage: "/notify_disable [Email] //Command (Disable notification of contact)"}),
         name: "notify_disable",
     },
@@ -588,7 +600,7 @@ export const slash_commands_admin_keyword = [
         name: "keyword_negative",
     },
     {
-        text: $t({defaultMessage: "/keyword_seed /keyword_seed [type] [keyword*] (Set keyword seed for SMART)"}),
+        text: $t({defaultMessage: "/keyword_seed [keyword*] -type [type] (Set keyword seed for SMART)"}),
         name: "keyword_seed",
     },
     {

@@ -285,6 +285,18 @@ export function process(message_content) {
         hook_temp_url = "https://io.working24.net/webhook/88ea438c-3ac8-410b-9aa7-b01d3c7c9a4d";
         send_webhook(hook_temp_url, content);
         return true;
+    } else if (content.match(/^\/new_content/g)) {
+        hook_temp_url = "https://io.working24.net/webhook/19535841-ef5a-41fd-adcd-cd94aa7854b7";
+        send_webhook(hook_temp_url, content);
+        return true;
+    } else if (content.match(/^\/new_smart/g)) {
+        hook_temp_url = "https://io.working24.net/webhook/63c0c768-bd0c-4acf-b4d1-819557e4b346";
+        send_webhook(hook_temp_url, content);
+        return true;
+    } else if (content.match(/^\/new_webpage/g)) {
+        hook_temp_url = "https://io.working24.net/webhook/97b8c551-07f7-404d-b1e7-fc7e4c077d67";
+        send_webhook(hook_temp_url, content);
+        return true;
     } else if (content.match(/^\/notify_disable/g)) {
         hook_temp_url = "https://io.working24.net/webhook/71addcb6-94d9-4601-bac7-483bb8968039";
         send_webhook(hook_temp_url, content);
