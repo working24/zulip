@@ -517,7 +517,7 @@ export const slash_commands_admin = [
         name: "new_content",
     },
     {
-        text: $t({defaultMessage: "/new_smart (Create new smart sheet request)"}),
+        text: $t({defaultMessage: "/new_smart [tab_name*] -w [website] (Create new smart sheet request)"}),
         name: "new_smart",
     },
     {
@@ -600,7 +600,7 @@ export const slash_commands_admin_keyword = [
         name: "keyword_negative",
     },
     {
-        text: $t({defaultMessage: "/keyword_seed [keyword*] -type [type] (Set keyword seed for SMART)"}),
+        text: $t({defaultMessage: "/keyword_seed [keyword*] -t [type] -n [tab_name] (Set keyword seed for SMART)"}),
         name: "keyword_seed",
     },
     {
