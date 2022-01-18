@@ -377,7 +377,7 @@ function should_show_custom_query(query, items) {
 
 export const slash_commands_chat = [
     {
-        text: $t({defaultMessage: "/sk [-email(none) -sms] [Message] (Send message)"}),
+        text: $t({defaultMessage: "/sk [-sms] [Message*] (Send message to email/sms)"}),
         name: "sk",
     },
 ];
@@ -432,6 +432,52 @@ export const slash_commands_keyword = [
     {
         text: $t({defaultMessage: "/keyword_update (Update new keywords list for SMART)"}),
         name: "keyword_update",
+    },
+];
+
+export const slash_commands_project = [
+    {
+        text: $t({defaultMessage: "/project_activate (Activate project)"}),
+        name: "project_activate",
+    },
+    {
+        text: $t({defaultMessage: "/project_cancel [project_id] //Reason of cancellation (Cancel project)"}),
+        name: "project_cancel",
+    },
+    {
+        text: $t({defaultMessage: "/project_set [level/priority] [value] (Project set level or priority)"}),
+        name: "project_set",
+    },
+    {
+        text: $t({defaultMessage: "/sk [-sms] [Message*] (Send message to email/sms)"}),
+        name: "sk",
+    },
+    {
+        text: $t({defaultMessage: "/sk_comment [comment*] (Comment to all tasks in project)"}),
+        name: "sk_comment",
+    },
+];
+
+export const slash_commands_admin_project = [
+    {
+        text: $t({defaultMessage: "/project_activate (Activate project)"}),
+        name: "project_activate",
+    },
+    {
+        text: $t({defaultMessage: "/project_cancel [project_id] //Reason of cancellation (Cancel project)"}),
+        name: "project_cancel",
+    },
+    {
+        text: $t({defaultMessage: "/project_set [level/priority] [value] (Project set level or priority)"}),
+        name: "project_set",
+    },
+    {
+        text: $t({defaultMessage: "/sk [-sms] [Message*] (Send message to email/sms)"}),
+        name: "sk",
+    },
+    {
+        text: $t({defaultMessage: "/sk_comment [comment*] (Comment to all tasks in project)"}),
+        name: "sk_comment",
     },
 ];
 
@@ -527,18 +573,6 @@ export const slash_commands_admin = [
     {
         text: $t({defaultMessage: "/notify_disable [Email] //Command (Disable notification of contact)"}),
         name: "notify_disable",
-    },
-    {
-        text: $t({defaultMessage: "/project_activate (Activate project)"}),
-        name: "project_activate",
-    },
-    {
-        text: $t({defaultMessage: "/project_cancel [project_id] //Reason of cancellation (Cancel project)"}),
-        name: "project_cancel",
-    },
-    {
-        text: $t({defaultMessage: "/project_set [level/priority] [value] (Project set level or priority)"}),
-        name: "project_set",
     },
     {
         text: $t({defaultMessage: "/sk [-email(none) -sms] [Message] (Send to contact)"}),
@@ -855,6 +889,9 @@ export function get_candidates(query) {
       if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^Kw-.*__.*")) {
         const commands = slash_commands_admin_keyword;
         return commands;
+      } else if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^project-.*")) {
+        const commands = slash_commands_admin_project;
+        return commands;
       } else if (page_params.is_admin || page_params.is_moderator) {
         const commands = slash_commands_admin;
         return commands;
@@ -863,6 +900,9 @@ export function get_candidates(query) {
         return commands;
       } else if (compose_state.topic().match("^Kw-.*__.*") && !page_params.is_guest) {
         const commands = slash_commands_keyword;
+        return commands;
+      } else if (compose_state.topic().match("^project-.*") && !page_params.is_guest) {
+        const commands = slash_commands_project;
         return commands;
       } else if (compose_state.topic() == "workflow" && !page_params.is_guest) {
         const commands = slash_commands_workflow;
