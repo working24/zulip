@@ -437,22 +437,6 @@ export const slash_commands_keyword = [
 
 export const slash_commands_project = [
     {
-        text: $t({defaultMessage: "/project_activate (Activate project)"}),
-        name: "project_activate",
-    },
-    {
-        text: $t({defaultMessage: "/project_cancel [project_id] //Reason of cancellation (Cancel project)"}),
-        name: "project_cancel",
-    },
-    {
-        text: $t({defaultMessage: "/project_set [level/priority] [value] (Project set level or priority)"}),
-        name: "project_set",
-    },
-    {
-        text: $t({defaultMessage: "/sk [-sms] [Message*] (Send message to email/sms)"}),
-        name: "sk",
-    },
-    {
         text: $t({defaultMessage: "/sk_comment [comment*] (Comment to all tasks in project)"}),
         name: "sk_comment",
     },
@@ -889,7 +873,7 @@ export function get_candidates(query) {
       if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^Kw-.*__.*")) {
         const commands = slash_commands_admin_keyword;
         return commands;
-      } else if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^project-.*")) {
+      } else if ((page_params.is_admin || page_params.is_moderator) && (compose_state.topic().match("^project-.*") || compose_state.topic().match("^request-.*"))) {
         const commands = slash_commands_admin_project;
         return commands;
       } else if (page_params.is_admin || page_params.is_moderator) {
