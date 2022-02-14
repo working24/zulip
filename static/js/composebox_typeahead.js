@@ -603,6 +603,10 @@ export const slash_commands_admin = [
         name: "webpage_activate",
     },
     {
+        text: $t({defaultMessage: "/webpage_hosting [create/remove*] (Create/remove hosting of webpage)"}),
+        name: "webpage_hosting",
+    },
+    {
         text: $t({defaultMessage: "/work_cancel [Work_link] [None/Edit] //Comment for member (Cancel work of member)"}),
         name: "work_cancel",
     },
