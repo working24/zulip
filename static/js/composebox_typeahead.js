@@ -465,6 +465,21 @@ export const slash_commands_admin_project = [
     },
 ];
 
+export const slash_commands_admin_webpage = [
+    {
+        text: $t({defaultMessage: "/webpage_activate (Activate webpage)"}),
+        name: "webpage_activate",
+    },
+    {
+        text: $t({defaultMessage: "/webpage_hosting [create/remove*] (Create/remove hosting of webpage)"}),
+        name: "webpage_hosting",
+    },
+    {
+        text: $t({defaultMessage: "/webpage_import [post/page/product*] [old_link*] (Import from other webpage)"}),
+        name: "webpage_import",
+    },
+];
+
 export const slash_commands_admin = [
     {
         text: $t({defaultMessage: "/dark (Toggle night mode)"}),
@@ -597,18 +612,6 @@ export const slash_commands_admin = [
     {
         text: $t({defaultMessage: "/update [help/billing] (Update information or notes)"}),
         name: "update",
-    },
-    {
-        text: $t({defaultMessage: "/webpage_activate (Activate webpage)"}),
-        name: "webpage_activate",
-    },
-    {
-        text: $t({defaultMessage: "/webpage_hosting [create/remove*] (Create/remove hosting of webpage)"}),
-        name: "webpage_hosting",
-    },
-    {
-        text: $t({defaultMessage: "/webpage_import [product*] (Import product from other webpage)"}),
-        name: "webpage_import",
     },
     {
         text: $t({defaultMessage: "/work_cancel [Work_link] [None/Edit] //Comment for member (Cancel work of member)"}),
@@ -880,6 +883,9 @@ export function get_candidates(query) {
     function get_slash_commands_data() {
       if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^Kw-.*__.*")) {
         const commands = slash_commands_admin_keyword;
+        return commands;
+      } else if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^Webpage__.*")) {
+        const commands = slash_commands_admin_webpage;
         return commands;
       } else if ((page_params.is_admin || page_params.is_moderator) && (compose_state.topic().match("^project-.*") || compose_state.topic().match("^request-.*"))) {
         const commands = slash_commands_admin_project;
