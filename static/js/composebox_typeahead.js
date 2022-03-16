@@ -498,6 +498,10 @@ export const slash_commands_admin = [
         name: "fluid-width",
     },
     {
+        text: $t({defaultMessage: "/invite (Invite wosetter to app)"}),
+        name: "invite",
+    },
+    {
         text: $t({defaultMessage: "/light (Toggle day mode)"}),
         name: "light",
     },
