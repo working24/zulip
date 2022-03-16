@@ -411,8 +411,8 @@ export const slash_commands = [
         name: "night",
     },
     {
-        text: $t({defaultMessage: "/workflow (Activate workflow for member)"}),
-        name: "workflow",
+        text: $t({defaultMessage: "/activate (Activate app to use)"}),
+        name: "activate",
     },
 ];
 
