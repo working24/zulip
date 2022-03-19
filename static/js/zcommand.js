@@ -249,6 +249,10 @@ export function process(message_content) {
         hook_temp_url = "https://io.working24.net/webhook/1d4595c1-d37d-4f5d-a1a3-b51f860c6665";
         send_webhook(hook_temp_url, content);
         return true;
+    } else if (content.match(/^\/activate/g)) {
+        hook_temp_url = "https://io.working24.net/webhook/4c67ac3c-bcda-4d1e-8999-8ce1b8464fe1";
+        send_webhook(hook_temp_url, content);
+        return true;
     } else if (content.match(/^\/archive/g)) {
         hook_temp_url = "https://io.working24.net/webhook/4aa0e344-1961-4f7f-8186-927fa41d954f";
         send_webhook(hook_temp_url, content);
@@ -263,6 +267,10 @@ export function process(message_content) {
         return true;
     } else if (content.match(/^\/get_task/g)) {
         hook_temp_url = "https://io.working24.net/webhook/636b4b22-4e22-4109-bc43-ad68ebbabedf";
+        send_webhook(hook_temp_url, content);
+        return true;
+    } else if (content.match(/^\/invite/g)) {
+        hook_temp_url = "https://io.working24.net/webhook/4f5b6544-e37f-4da0-9e82-cf9be90f7307";
         send_webhook(hook_temp_url, content);
         return true;
     } else if (content.match(/^\/keyword_link/g)) {
@@ -371,10 +379,6 @@ export function process(message_content) {
         return true;
     } else if (content.match(/^\/work_cancel/g)) {
         hook_temp_url = "https://io.working24.net/webhook/7111958b-3904-4dbb-bb40-c766d1e61119";
-        send_webhook(hook_temp_url, content);
-        return true;
-    } else if (content.match(/^\/workflow/g)) {
-        hook_temp_url = "https://io.working24.net/webhook/4c67ac3c-bcda-4d1e-8999-8ce1b8464fe1";
         send_webhook(hook_temp_url, content);
         return true;
     }

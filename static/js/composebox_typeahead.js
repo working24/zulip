@@ -411,8 +411,8 @@ export const slash_commands = [
         name: "night",
     },
     {
-        text: $t({defaultMessage: "/workflow (Activate workflow for member)"}),
-        name: "workflow",
+        text: $t({defaultMessage: "/activate (Activate app to use)"}),
+        name: "activate",
     },
 ];
 
@@ -496,6 +496,10 @@ export const slash_commands_admin = [
     {
         text: $t({defaultMessage: "/fluid-width (Toggle fluid width mode)"}),
         name: "fluid-width",
+    },
+    {
+        text: $t({defaultMessage: "/invite (Invite wosetter to app)"}),
+        name: "invite",
     },
     {
         text: $t({defaultMessage: "/light (Toggle day mode)"}),
