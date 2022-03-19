@@ -71,26 +71,18 @@ def send_initial_pms(user: UserProfile) -> None:
         ).format(help_url=help_url)
 
     content = (
-        _("Hi, mừng bạn gia nhập thành viên của working24!") + "\n"
+        _("Hi, mừng bạn lần đầu sử dụng app wo24!") + "\n"
         "\n"
         + _("Để bắt đầu dùng app, hãy thực hiện theo hướng dẫn sau.")
         + " "
         + _("Chú ý nhé:")
         + "\n"
-        "* " + _("**Kích hoạt workflow của bạn bằng cách gõ bên dưới lệnh `/workflow`**") + "\n"
-        + _("  [Xem thêm hình ảnh và video hướng dẫn kích workflow chi tiết](https://help.working24.net/t/huong-dan-dang-nhap-app-va-kich-hoat-workflow/408)") + "\n"
-        "* "
-        + _("Sau khi `stream workflow` mở, bạn xem tiếp các hướng dẫn trong stream bên dưới")
-        + "\n"
-        "* " + _("Hãy tập trung trao đổi trong `stream`, đừng trao đổi tại đây vì thông tin này là tự động") + "\n"
-        "{organization_setup_text}"
+        "* " + _("**Bạn cần kích hoạt app bằng cách gõ bên dưới lệnh `/activate`**") + "\n"
+        + _("  [Xem thêm hướng dẫn chi tiết kích hoạt app tại đây](https://help.working24.net/t/h-ng-d-n-dang-nh-p-va-kich-ho-t-app/408)") + "\n"
         "\n"
-        + _("Đây là hướng dẫn dùng app dành riêng cho `thành viên thực hiện dự án` của working24. App này đang phát triển bản thử nghiệm (beta).")
-        + " "
-        + _(
-            "Hãy theo dõi tài liệu hướng dẫn, và nhờ trợ giúp từ người hướng dẫn của bạn! "
-            "Các hỗ trợ cho trello sẽ thay thế chính thức cho app."
-        )
+        + _("Sau đó, hãy xem tiếp các hướng dẫn bên dưới, và thông tin trong `stream`")
+        + "\n"
+        + _("Đây là hướng dẫn dành riêng cho `user` để dùng app của wo24. App đang phát triển bản thử nghiệm (beta).")
     )
 
     content = content.format(
