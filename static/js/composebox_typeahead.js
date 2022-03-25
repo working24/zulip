@@ -440,6 +440,10 @@ export const slash_commands_project = [
         text: $t({defaultMessage: "/sk_comment [comment*] (Comment to all tasks in project)"}),
         name: "sk_comment",
     },
+    {
+        text: $t({defaultMessage: "/task_note [id*] [note/delete*] (Note in task)"}),
+        name: "sk_comment",
+    },
 ];
 
 export const slash_commands_admin_project = [
@@ -903,7 +907,7 @@ export function get_candidates(query) {
       } else if (compose_state.topic().match("^Kw-.*__.*") && !page_params.is_guest) {
         const commands = slash_commands_keyword;
         return commands;
-      } else if (compose_state.topic().match("^project-.*") && !page_params.is_guest) {
+      } else if (compose_state.topic().match("^project-.*") && page_params.is_guest) {
         const commands = slash_commands_project;
         return commands;
       } else if (compose_state.topic() == "workflow" && !page_params.is_guest) {
