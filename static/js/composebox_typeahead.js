@@ -401,21 +401,6 @@ export const slash_commands_workflow = [
     },
 ];
 
-export const slash_commands = [
-    {
-        text: $t({defaultMessage: "/dark (Toggle night mode)"}),
-        name: "dark",
-    },
-    {
-        text: $t({defaultMessage: "/night (Toggle night mode)"}),
-        name: "night",
-    },
-    {
-        text: $t({defaultMessage: "/activate (Activate app to use)"}),
-        name: "activate",
-    },
-];
-
 export const slash_commands_keyword = [
     {
         text: $t({defaultMessage: "/keyword_link [keyword*] [link*] (Set page link of keyword)"}),
@@ -432,6 +417,33 @@ export const slash_commands_keyword = [
     {
         text: $t({defaultMessage: "/keyword_update (Update new keywords list for SMART)"}),
         name: "keyword_update",
+    },
+];
+
+export const slash_commands_admin_keyword = [
+    {
+        text: $t({defaultMessage: "/keyword_link [keyword*] [link*] (Set page link of keyword)"}),
+        name: "keyword_link",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_negative [keyword*] (Set negative keyword)"}),
+        name: "keyword_negative",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_seed [keyword*] -t [type] -n [tab_name] (Set keyword seed for SMART)"}),
+        name: "keyword_seed",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_submit -type* [type*] -seed* [seed keyword*] -keywords* [keywords_list*] (Submit new keywords to database)"}),
+        name: "keyword_submit",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_update (Update new keywords list for SMART)"}),
+        name: "keyword_update",
+    },
+    {
+        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
+        name: "test_command",
     },
 ];
 
@@ -467,9 +479,17 @@ export const slash_commands_admin_project = [
         text: $t({defaultMessage: "/sk_comment [comment*] (Comment to all tasks in project)"}),
         name: "sk_comment",
     },
+    {
+        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
+        name: "test_command",
+    },
 ];
 
 export const slash_commands_admin_webpage = [
+    {
+        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
+        name: "test_command",
+    },
     {
         text: $t({defaultMessage: "/webpage_activate (Activate webpage)"}),
         name: "webpage_activate",
@@ -481,6 +501,21 @@ export const slash_commands_admin_webpage = [
     {
         text: $t({defaultMessage: "/webpage_import [post/page/product*] [old_link*] (Import from other webpage)"}),
         name: "webpage_import",
+    },
+];
+
+export const slash_commands = [
+    {
+        text: $t({defaultMessage: "/dark (Toggle night mode)"}),
+        name: "dark",
+    },
+    {
+        text: $t({defaultMessage: "/night (Toggle night mode)"}),
+        name: "night",
+    },
+    {
+        text: $t({defaultMessage: "/activate (Activate app to use)"}),
+        name: "activate",
     },
 ];
 
@@ -624,29 +659,6 @@ export const slash_commands_admin = [
     {
         text: $t({defaultMessage: "/work_cancel [Work_link] [None/Edit] //Comment for member (Cancel work of member)"}),
         name: "work_cancel",
-    },
-];
-
-export const slash_commands_admin_keyword = [
-    {
-        text: $t({defaultMessage: "/keyword_link [keyword*] [link*] (Set page link of keyword)"}),
-        name: "keyword_link",
-    },
-    {
-        text: $t({defaultMessage: "/keyword_negative [keyword*] (Set negative keyword)"}),
-        name: "keyword_negative",
-    },
-    {
-        text: $t({defaultMessage: "/keyword_seed [keyword*] -t [type] -n [tab_name] (Set keyword seed for SMART)"}),
-        name: "keyword_seed",
-    },
-    {
-        text: $t({defaultMessage: "/keyword_submit -type* [type*] -seed* [seed keyword*] -keywords* [keywords_list*] (Submit new keywords to database)"}),
-        name: "keyword_submit",
-    },
-    {
-        text: $t({defaultMessage: "/keyword_update (Update new keywords list for SMART)"}),
-        name: "keyword_update",
     },
 ];
 
