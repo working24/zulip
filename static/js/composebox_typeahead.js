@@ -449,6 +449,10 @@ export const slash_commands_admin_keyword = [
 
 export const slash_commands_project = [
     {
+        text: $t({defaultMessage: "/archive_project (Archive project and close)"}),
+        name: "archive_project",
+    },
+    {
         text: $t({defaultMessage: "/sk_comment [comment*] (Comment to all tasks in project)"}),
         name: "sk_comment",
     },
@@ -462,6 +466,10 @@ export const slash_commands_admin_project = [
     {
         text: $t({defaultMessage: "/project_activate (Activate project)"}),
         name: "project_activate",
+    },
+    {
+        text: $t({defaultMessage: "/archive_project (Archive project and close)"}),
+        name: "archive_project",
     },
     {
         text: $t({defaultMessage: "/project_cancel [project_id] //Reason of cancellation (Cancel project)"}),
@@ -589,8 +597,8 @@ export const slash_commands_admin = [
         name: "accounting_withdrawal",
     },
     {
-        text: $t({defaultMessage: "/archive (Close this stream)"}),
-        name: "archive",
+        text: $t({defaultMessage: "/archive_stream (Archive stream and close)"}),
+        name: "archive_stream",
     },
     {
         text: $t({defaultMessage: "/finish_task (Finish task of work)"}),
