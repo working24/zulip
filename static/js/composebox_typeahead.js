@@ -411,7 +411,7 @@ export const slash_commands_keyword = [
         name: "keyword_negative",
     },
     {
-        text: $t({defaultMessage: "/keyword_seed [type] [keyword*] (Set keyword seed for SMART)"}),
+        text: $t({defaultMessage: "/keyword_seed [[type]] [keyword*] (Set keyword seed for SMART)"}),
         name: "keyword_seed",
     },
     {
@@ -430,7 +430,7 @@ export const slash_commands_admin_keyword = [
         name: "keyword_negative",
     },
     {
-        text: $t({defaultMessage: "/keyword_seed [keyword*] -t [type] -n [tab_name] (Set keyword seed for SMART)"}),
+        text: $t({defaultMessage: "/keyword_seed [[type]] [keyword*] (Set keyword seed for SMART)"}),
         name: "keyword_seed",
     },
     {
