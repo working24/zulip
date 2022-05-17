@@ -377,7 +377,7 @@ function should_show_custom_query(query, items) {
 
 export const slash_commands_chat = [
     {
-        text: $t({defaultMessage: "/sk [-sms] [Message*] (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
         name: "sk",
     },
 ];
@@ -480,7 +480,7 @@ export const slash_commands_admin_project = [
         name: "project_set",
     },
     {
-        text: $t({defaultMessage: "/sk [-sms] [Message*] (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
         name: "sk",
     },
     {
@@ -629,7 +629,7 @@ export const slash_commands_admin = [
         name: "notify_disable",
     },
     {
-        text: $t({defaultMessage: "/sk [-email(none) -sms] [Message] (Send to contact)"}),
+        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
         name: "sk",
     },
     {
