@@ -396,7 +396,7 @@ export const slash_commands_workflow = [
         name: "get_task",
     },
     {
-        text: $t({defaultMessage: "/summary (Summary this topic)"}),
+        text: $t({defaultMessage: "/summary (Summary your work)"}),
         name: "summary",
     },
 ];
@@ -641,7 +641,7 @@ export const slash_commands_admin = [
         name: "sk_set",
     },
     {
-        text: $t({defaultMessage: "/summary (Summary this topic)"}),
+        text: $t({defaultMessage: "/summary (Summary your work)"}),
         name: "summary",
     },
     {
