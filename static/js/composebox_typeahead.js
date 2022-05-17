@@ -403,15 +403,15 @@ export const slash_commands_workflow = [
 
 export const slash_commands_keyword = [
     {
-        text: $t({defaultMessage: "/keyword_link [keyword*] [link*] (Set page link of keyword)"}),
+        text: $t({defaultMessage: "/keyword_link [keyword]* [link]* (Set page link of keyword)"}),
         name: "keyword_link",
     },
     {
-        text: $t({defaultMessage: "/keyword_negative [keyword*] (Set negative keyword)"}),
+        text: $t({defaultMessage: "/keyword_negative [keyword]* (Set negative keyword)"}),
         name: "keyword_negative",
     },
     {
-        text: $t({defaultMessage: "/keyword_seed [[type]] [keyword*] (Set keyword seed for SMART)"}),
+        text: $t({defaultMessage: "/keyword_seed `[type] [keyword]* (Set keyword seed for SMART)"}),
         name: "keyword_seed",
     },
     {
@@ -422,19 +422,19 @@ export const slash_commands_keyword = [
 
 export const slash_commands_admin_keyword = [
     {
-        text: $t({defaultMessage: "/keyword_link [keyword*] [link*] (Set page link of keyword)"}),
+        text: $t({defaultMessage: "/keyword_link [keyword]* [link]* (Set page link of keyword)"}),
         name: "keyword_link",
     },
     {
-        text: $t({defaultMessage: "/keyword_negative [keyword*] (Set negative keyword)"}),
+        text: $t({defaultMessage: "/keyword_negative [keyword]* (Set negative keyword)"}),
         name: "keyword_negative",
     },
     {
-        text: $t({defaultMessage: "/keyword_seed [[type]] [keyword*] (Set keyword seed for SMART)"}),
+        text: $t({defaultMessage: "/keyword_seed `[type] [keyword]* (Set keyword seed for SMART)"}),
         name: "keyword_seed",
     },
     {
-        text: $t({defaultMessage: "/keyword_submit -type* [type*] -seed* [seed keyword*] -keywords* [keywords_list*] (Submit new keywords to database)"}),
+        text: $t({defaultMessage: "/keyword_submit `[type]* [keyword_type]* `[seed]* [seed_keyword]* `[keywords]* [keywords_list]* (Submit new keywords to database)"}),
         name: "keyword_submit",
     },
     {
