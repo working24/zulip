@@ -669,7 +669,7 @@ export const slash_commands_admin = [
         name: "test_command",
     },
     {
-        text: $t({defaultMessage: "/update [help/billing] (Update information or notes)"}),
+        text: $t({defaultMessage: "/update `[help/billing]* (Update information or notes)"}),
         name: "update",
     },
     {
