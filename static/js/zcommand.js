@@ -253,7 +253,7 @@ export function process(message_content) {
         hook_temp_url = "https://io.working24.net/webhook/4c67ac3c-bcda-4d1e-8999-8ce1b8464fe1";
         send_webhook(hook_temp_url, content);
         return true;
-    } else if (content.match(/^\/archive_stream/g)) {
+    } else if (content.match(/^\/archive/g)) {
         hook_temp_url = "https://io.working24.net/webhook/4aa0e344-1961-4f7f-8186-927fa41d954f";
         send_webhook(hook_temp_url, content);
         return true;

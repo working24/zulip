@@ -597,8 +597,8 @@ export const slash_commands_admin = [
         name: "accounting_withdrawal",
     },
     {
-        text: $t({defaultMessage: "/archive_stream (Archive stream and close)"}),
-        name: "archive_stream",
+        text: $t({defaultMessage: "/archive (Archive stream and close)"}),
+        name: "archive",
     },
     {
         text: $t({defaultMessage: "/finish_task (Finish task of work)"}),
