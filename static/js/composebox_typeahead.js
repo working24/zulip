@@ -476,7 +476,7 @@ export const slash_commands_admin_project = [
         name: "project_cancel",
     },
     {
-        text: $t({defaultMessage: "/project_set [level/priority] [value] (Project set level or priority)"}),
+        text: $t({defaultMessage: "/project_set [level/priority/speed] [value] (Project set level, priority, speed)"}),
         name: "project_set",
     },
     {
