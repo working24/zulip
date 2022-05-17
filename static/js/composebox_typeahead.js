@@ -657,7 +657,7 @@ export const slash_commands_admin = [
         name: "team_level",
     },
     {
-        text: $t({defaultMessage: "/team_merge [#New stream] (Merge stream, account, email to new one for member)"}),
+        text: $t({defaultMessage: "/team_merge [new_stream_id]* (Merge stream, account, email to new one for member)"}),
         name: "team_merge",
     },
     {
