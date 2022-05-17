@@ -649,16 +649,20 @@ export const slash_commands_admin = [
         name: "team_accept",
     },
     {
-        text: $t({defaultMessage: "/team_level [Level] //Comment (Set level for team member)"}),
-        name: "team_level",
-    },
-    {
         text: $t({defaultMessage: "/team_exit //Reason (Team exit for member who quit or rejected from working)"}),
         name: "team_exit",
     },
     {
+        text: $t({defaultMessage: "/team_level [Level] //Comment (Set level for team member)"}),
+        name: "team_level",
+    },
+    {
         text: $t({defaultMessage: "/team_merge [#New stream] (Merge stream, account, email to new one for member)"}),
         name: "team_merge",
+    },
+    {
+        text: $t({defaultMessage: "/team_set `[payment/retain] [value*] (Set payment, retain for member)"}),
+        name: "team_set",
     },
     {
         text: $t({defaultMessage: "/test_command (Test command for admin)"}),
