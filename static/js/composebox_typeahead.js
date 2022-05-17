@@ -617,7 +617,7 @@ export const slash_commands_admin = [
         name: "new_content",
     },
     {
-        text: $t({defaultMessage: "/new_smart [tab_name*] -w [website] (Create new smart sheet request)"}),
+        text: $t({defaultMessage: "/new_smart `[tab]* [tab_name]* `[web] [web_domain] (Create new smart sheet request)"}),
         name: "new_smart",
     },
     {
