@@ -653,7 +653,7 @@ export const slash_commands_admin = [
         name: "team_exit",
     },
     {
-        text: $t({defaultMessage: "/team_level [Level] //Comment (Set level for team member)"}),
+        text: $t({defaultMessage: "/team_level [level]* //comment (Set level for member)"}),
         name: "team_level",
     },
     {
