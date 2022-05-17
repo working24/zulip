@@ -625,7 +625,7 @@ export const slash_commands_admin = [
         name: "new_webpage",
     },
     {
-        text: $t({defaultMessage: "/notify_disable [Email] //Command (Disable notification of contact)"}),
+        text: $t({defaultMessage: "/notify_disable [email]* //command (Disable notification of contact)"}),
         name: "notify_disable",
     },
     {
