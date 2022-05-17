@@ -661,7 +661,7 @@ export const slash_commands_admin = [
         name: "team_merge",
     },
     {
-        text: $t({defaultMessage: "/team_set `[payment/retain] [value*] (Set payment, retain for member)"}),
+        text: $t({defaultMessage: "/team_set `[payment/retain]* [value]* (Set payment, retain for member)"}),
         name: "team_set",
     },
     {
