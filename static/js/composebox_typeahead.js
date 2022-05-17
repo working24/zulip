@@ -581,7 +581,7 @@ export const slash_commands_admin = [
         name: "accounting_closing_term",
     },
     {
-        text: $t({defaultMessage: "/accounting_deposit [vnd_number] //Comment Momo, Vietcombank (Deposit for increase account)"}),
+        text: $t({defaultMessage: "/accounting_deposit [vnd_number]* //comment (Deposit for increase account)"}),
         name: "accounting_deposit",
     },
     {
