@@ -449,8 +449,8 @@ export const slash_commands_admin_keyword = [
 
 export const slash_commands_project = [
     {
-        text: $t({defaultMessage: "/archive_project (Archive project and close)"}),
-        name: "archive_project",
+        text: $t({defaultMessage: "/close (Close project)"}),
+        name: "close",
     },
     {
         text: $t({defaultMessage: "/sk_comment [comment*] (Comment to all tasks in project)"}),
@@ -468,8 +468,8 @@ export const slash_commands_admin_project = [
         name: "project_activate",
     },
     {
-        text: $t({defaultMessage: "/archive_project (Archive project and close)"}),
-        name: "archive_project",
+        text: $t({defaultMessage: "/close (Close project)"}),
+        name: "close",
     },
     {
         text: $t({defaultMessage: "/project_cancel [project_id] //Reason of cancellation (Cancel project)"}),
