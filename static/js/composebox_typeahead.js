@@ -457,7 +457,7 @@ export const slash_commands_project = [
         name: "sk_comment",
     },
     {
-        text: $t({defaultMessage: "/task_note [id*] [delete] [//note*] (Note in task)"}),
+        text: $t({defaultMessage: "/task_note [id]* `[delete] //note (Note in task)"}),
         name: "task_note",
     },
 ];
