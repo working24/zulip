@@ -253,11 +253,11 @@ export function process(message_content) {
         hook_temp_url = "https://io.working24.net/webhook/4c67ac3c-bcda-4d1e-8999-8ce1b8464fe1";
         send_webhook(hook_temp_url, content);
         return true;
-    } else if (content.match(/^\/archive_stream/g)) {
+    } else if (content.match(/^\/archive/g)) {
         hook_temp_url = "https://io.working24.net/webhook/4aa0e344-1961-4f7f-8186-927fa41d954f";
         send_webhook(hook_temp_url, content);
         return true;
-    } else if (content.match(/^\/archive_project/g)) {
+    } else if (content.match(/^\/close/g)) {
         hook_temp_url = "https://io.working24.net/webhook/94d1e498-2970-463d-b782-3c897d52503f";
         send_webhook(hook_temp_url, content);
         return true;
@@ -353,16 +353,20 @@ export function process(message_content) {
         hook_temp_url = "https://io.working24.net/webhook/a4aeb410-df6b-4f73-b9ad-47ae951332ec";
         send_webhook(hook_temp_url, content);
         return true;
-    } else if (content.match(/^\/team_level/g)) {
-        hook_temp_url = "https://io.working24.net/webhook/a7a62faa-eca0-497d-a687-6ab546dbf48c";
-        send_webhook(hook_temp_url, content);
-        return true;
     } else if (content.match(/^\/team_exit/g)) {
         hook_temp_url = "https://io.working24.net/webhook/8b14d9b2-ca24-4e20-a0ba-cf1a113a0fbd";
         send_webhook(hook_temp_url, content);
         return true;
+    } else if (content.match(/^\/team_level/g)) {
+        hook_temp_url = "https://io.working24.net/webhook/a7a62faa-eca0-497d-a687-6ab546dbf48c";
+        send_webhook(hook_temp_url, content);
+        return true;
     } else if (content.match(/^\/team_merge/g)) {
         hook_temp_url = "https://io.working24.net/webhook/c1b8c718-9041-47b5-a254-3544fcc9b67c";
+        send_webhook(hook_temp_url, content);
+        return true;
+    } else if (content.match(/^\/team_set/g)) {
+        hook_temp_url = "https://io.working24.net/webhook/dfee4a7d-f13e-4bea-a097-be916dd427d7";
         send_webhook(hook_temp_url, content);
         return true;
     } else if (content.match(/^\/test_command/g)) {

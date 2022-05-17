@@ -377,7 +377,7 @@ function should_show_custom_query(query, items) {
 
 export const slash_commands_chat = [
     {
-        text: $t({defaultMessage: "/sk [-sms] [Message*] (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
         name: "sk",
     },
 ];
@@ -396,22 +396,22 @@ export const slash_commands_workflow = [
         name: "get_task",
     },
     {
-        text: $t({defaultMessage: "/summary (Summary this topic)"}),
+        text: $t({defaultMessage: "/summary (Summary your work)"}),
         name: "summary",
     },
 ];
 
 export const slash_commands_keyword = [
     {
-        text: $t({defaultMessage: "/keyword_link [keyword*] [link*] (Set page link of keyword)"}),
+        text: $t({defaultMessage: "/keyword_link [keyword]* [link]* (Set page link of keyword)"}),
         name: "keyword_link",
     },
     {
-        text: $t({defaultMessage: "/keyword_negative [keyword*] (Set negative keyword)"}),
+        text: $t({defaultMessage: "/keyword_negative [keyword]* (Set negative keyword)"}),
         name: "keyword_negative",
     },
     {
-        text: $t({defaultMessage: "/keyword_seed [[type]] [keyword*] (Set keyword seed for SMART)"}),
+        text: $t({defaultMessage: "/keyword_seed `[type] [keyword]* (Set keyword seed for SMART)"}),
         name: "keyword_seed",
     },
     {
@@ -422,19 +422,19 @@ export const slash_commands_keyword = [
 
 export const slash_commands_admin_keyword = [
     {
-        text: $t({defaultMessage: "/keyword_link [keyword*] [link*] (Set page link of keyword)"}),
+        text: $t({defaultMessage: "/keyword_link [keyword]* [link]* (Set page link of keyword)"}),
         name: "keyword_link",
     },
     {
-        text: $t({defaultMessage: "/keyword_negative [keyword*] (Set negative keyword)"}),
+        text: $t({defaultMessage: "/keyword_negative [keyword]* (Set negative keyword)"}),
         name: "keyword_negative",
     },
     {
-        text: $t({defaultMessage: "/keyword_seed [[type]] [keyword*] (Set keyword seed for SMART)"}),
+        text: $t({defaultMessage: "/keyword_seed `[type] [keyword]* (Set keyword seed for SMART)"}),
         name: "keyword_seed",
     },
     {
-        text: $t({defaultMessage: "/keyword_submit -type* [type*] -seed* [seed keyword*] -keywords* [keywords_list*] (Submit new keywords to database)"}),
+        text: $t({defaultMessage: "/keyword_submit `[type]* [keyword_type]* `[seed]* [seed_keyword]* `[keywords]* [keywords_list]* (Submit new keywords to database)"}),
         name: "keyword_submit",
     },
     {
@@ -449,15 +449,15 @@ export const slash_commands_admin_keyword = [
 
 export const slash_commands_project = [
     {
-        text: $t({defaultMessage: "/archive_project (Archive project and close)"}),
-        name: "archive_project",
+        text: $t({defaultMessage: "/close (Close project)"}),
+        name: "close",
     },
     {
-        text: $t({defaultMessage: "/sk_comment [comment*] (Comment to all tasks in project)"}),
+        text: $t({defaultMessage: "/sk_comment [comment]* (Comment to all tasks in project)"}),
         name: "sk_comment",
     },
     {
-        text: $t({defaultMessage: "/task_note [id*] [delete] [//note*] (Note in task)"}),
+        text: $t({defaultMessage: "/task_note [id]* `[delete] //note (Note in task)"}),
         name: "task_note",
     },
 ];
@@ -468,19 +468,19 @@ export const slash_commands_admin_project = [
         name: "project_activate",
     },
     {
-        text: $t({defaultMessage: "/archive_project (Archive project and close)"}),
-        name: "archive_project",
+        text: $t({defaultMessage: "/close (Close project)"}),
+        name: "close",
     },
     {
         text: $t({defaultMessage: "/project_cancel [project_id] //Reason of cancellation (Cancel project)"}),
         name: "project_cancel",
     },
     {
-        text: $t({defaultMessage: "/project_set [level/priority] [value] (Project set level or priority)"}),
+        text: $t({defaultMessage: "/project_set [level/priority/speed] [value] (Project set level, priority, speed)"}),
         name: "project_set",
     },
     {
-        text: $t({defaultMessage: "/sk [-sms] [Message*] (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
         name: "sk",
     },
     {
@@ -581,11 +581,11 @@ export const slash_commands_admin = [
         name: "accounting_closing_term",
     },
     {
-        text: $t({defaultMessage: "/accounting_deposit [vnd_number] //Comment Momo, Vietcombank (Deposit for increase account)"}),
+        text: $t({defaultMessage: "/accounting_deposit [vnd_number]* //comment (Deposit for increase account)"}),
         name: "accounting_deposit",
     },
     {
-        text: $t({defaultMessage: "/accounting_miscellaneous [Project id] [vnd_fee] //Comment Paypal fee, Bank fee, Discount (Set miscellaneous fee for project)"}),
+        text: $t({defaultMessage: "/accounting_miscellaneous [project_id]* [vnd_fee]* //comment (Set miscellaneous fee for project)"}),
         name: "accounting_miscellaneous",
     },
     {
@@ -593,12 +593,12 @@ export const slash_commands_admin = [
         name: "accounting_request",
     },
     {
-        text: $t({defaultMessage: "/accounting_withdrawal [vnd_money] //Comment (Withdrawal money from account)"}),
+        text: $t({defaultMessage: "/accounting_withdrawal [vnd_number]* //comment (Withdrawal money from account to decrease)"}),
         name: "accounting_withdrawal",
     },
     {
-        text: $t({defaultMessage: "/archive_stream (Archive stream and close)"}),
-        name: "archive_stream",
+        text: $t({defaultMessage: "/archive (Archive stream and close)"}),
+        name: "archive",
     },
     {
         text: $t({defaultMessage: "/finish_task (Finish task of work)"}),
@@ -617,7 +617,7 @@ export const slash_commands_admin = [
         name: "new_content",
     },
     {
-        text: $t({defaultMessage: "/new_smart [tab_name*] -w [website] (Create new smart sheet request)"}),
+        text: $t({defaultMessage: "/new_smart `[tab]* [tab_name]* `[web] [web_domain] (Create new smart sheet request)"}),
         name: "new_smart",
     },
     {
@@ -625,11 +625,11 @@ export const slash_commands_admin = [
         name: "new_webpage",
     },
     {
-        text: $t({defaultMessage: "/notify_disable [Email] //Command (Disable notification of contact)"}),
+        text: $t({defaultMessage: "/notify_disable [email]* //command (Disable notification of contact)"}),
         name: "notify_disable",
     },
     {
-        text: $t({defaultMessage: "/sk [-email(none) -sms] [Message] (Send to contact)"}),
+        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
         name: "sk",
     },
     {
@@ -637,39 +637,43 @@ export const slash_commands_admin = [
         name: "sk_info",
     },
     {
-        text: $t({defaultMessage: "/sk_set  [department: hr/support] [type: email/phone] [contact details: dan.nt@working24.net/0916666888] (Set stream to contact list)"}),
+        text: $t({defaultMessage: "/sk_set `[department:hr/support]* `[type:email/phone]* [contact_details:dan.nt@working24.net/0916666888]* (Set stream to contact list)"}),
         name: "sk_set",
     },
     {
-        text: $t({defaultMessage: "/summary (Summary this topic)"}),
+        text: $t({defaultMessage: "/summary (Summary your work)"}),
         name: "summary",
     },
     {
-        text: $t({defaultMessage: "/team_accept (Team accept new member)"}),
+        text: $t({defaultMessage: "/team_accept (Accept new member)"}),
         name: "team_accept",
     },
     {
-        text: $t({defaultMessage: "/team_level [Level] //Comment (Set level for team member)"}),
-        name: "team_level",
-    },
-    {
-        text: $t({defaultMessage: "/team_exit //Reason (Team exit for member who quit or rejected from working)"}),
+        text: $t({defaultMessage: "/team_exit //Reason (Exit action for member from workflow)"}),
         name: "team_exit",
     },
     {
-        text: $t({defaultMessage: "/team_merge [#New stream] (Merge stream, account, email to new one for member)"}),
+        text: $t({defaultMessage: "/team_level [level]* //comment (Set level for member)"}),
+        name: "team_level",
+    },
+    {
+        text: $t({defaultMessage: "/team_merge [new_stream_id]* (Merge stream, account, email to new one for member)"}),
         name: "team_merge",
+    },
+    {
+        text: $t({defaultMessage: "/team_set `[payment/retain]* [value]* (Set payment, retain for member)"}),
+        name: "team_set",
     },
     {
         text: $t({defaultMessage: "/test_command (Test command for admin)"}),
         name: "test_command",
     },
     {
-        text: $t({defaultMessage: "/update [help/billing] (Update information or notes)"}),
+        text: $t({defaultMessage: "/update `[help/billing]* (Update information or notes)"}),
         name: "update",
     },
     {
-        text: $t({defaultMessage: "/work_cancel [Work_link] [None/Edit] //Comment for member (Cancel work of member)"}),
+        text: $t({defaultMessage: "/work_cancel [work_link]* `[edit] //comment_for_member (Cancel work of member)"}),
         name: "work_cancel",
     },
 ];
