@@ -673,7 +673,7 @@ export const slash_commands_admin = [
         name: "update",
     },
     {
-        text: $t({defaultMessage: "/work_cancel [Work_link] [None/Edit] //Comment for member (Cancel work of member)"}),
+        text: $t({defaultMessage: "/work_cancel [work_link]* `[edit] //comment_for_member (Cancel work of member)"}),
         name: "work_cancel",
     },
 ];
