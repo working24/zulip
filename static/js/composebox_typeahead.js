@@ -637,7 +637,7 @@ export const slash_commands_admin = [
         name: "sk_info",
     },
     {
-        text: $t({defaultMessage: "/sk_set  [department: hr/support] [type: email/phone] [contact details: dan.nt@working24.net/0916666888] (Set stream to contact list)"}),
+        text: $t({defaultMessage: "/sk_set `[department:hr/support]* `[type:email/phone]* [contact_details:dan.nt@working24.net/0916666888]* (Set stream to contact list)"}),
         name: "sk_set",
     },
     {
