@@ -645,11 +645,11 @@ export const slash_commands_admin = [
         name: "summary",
     },
     {
-        text: $t({defaultMessage: "/team_accept (Team accept new member)"}),
+        text: $t({defaultMessage: "/team_accept (Accept new member)"}),
         name: "team_accept",
     },
     {
-        text: $t({defaultMessage: "/team_exit //Reason (Team exit for member who quit or rejected from working)"}),
+        text: $t({defaultMessage: "/team_exit //Reason (Exit action for member from workflow)"}),
         name: "team_exit",
     },
     {
