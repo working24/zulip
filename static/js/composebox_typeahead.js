@@ -585,7 +585,7 @@ export const slash_commands_admin = [
         name: "accounting_deposit",
     },
     {
-        text: $t({defaultMessage: "/accounting_miscellaneous [Project id] [vnd_fee] //Comment Paypal fee, Bank fee, Discount (Set miscellaneous fee for project)"}),
+        text: $t({defaultMessage: "/accounting_miscellaneous [project_id]* [vnd_fee]* //comment (Set miscellaneous fee for project)"}),
         name: "accounting_miscellaneous",
     },
     {
