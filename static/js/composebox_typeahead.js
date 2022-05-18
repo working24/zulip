@@ -676,6 +676,10 @@ export const slash_commands_admin = [
         text: $t({defaultMessage: "/work_cancel [work_link]* `[edit] //comment_for_member (Cancel work of member)"}),
         name: "work_cancel",
     },
+    {
+        text: $t({defaultMessage: "/work_check [quantity]* (Check work of member)"}),
+        name: "work_check",
+    },
 ];
 
 export function filter_and_sort_mentions(is_silent, query, opts) {

@@ -393,6 +393,10 @@ export function process(message_content) {
         hook_temp_url = "https://io.working24.net/webhook/7111958b-3904-4dbb-bb40-c766d1e61119";
         send_webhook(hook_temp_url, content);
         return true;
+    } else if (content.match(/^\/work_check/g)) {
+        hook_temp_url = "https://io.working24.net/webhook/d1317c10-4c86-4669-95a5-7527c732211a";
+        send_webhook(hook_temp_url, content);
+        return true;
     }
 
     // It is incredibly important here to return false
