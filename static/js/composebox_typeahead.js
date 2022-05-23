@@ -484,7 +484,7 @@ export const slash_commands_admin_project = [
         name: "sk",
     },
     {
-        text: $t({defaultMessage: "/sk_comment [comment*] (Comment to all tasks in project)"}),
+        text: $t({defaultMessage: "/sk_comment [comment]* (Comment to all tasks in project)"}),
         name: "sk_comment",
     },
     {
