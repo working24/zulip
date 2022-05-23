@@ -462,6 +462,25 @@ export const slash_commands_project = [
     },
 ];
 
+export const slash_commands_project_content = [
+    {
+        text: $t({defaultMessage: "/close (Close project)"}),
+        name: "close",
+    },
+    {
+        text: $t({defaultMessage: "/sk_comment [comment]* (Comment to all tasks in project)"}),
+        name: "sk_comment",
+    },
+    {
+        text: $t({defaultMessage: "/task_note [id]* `[delete] //note (Note in task)"}),
+        name: "task_note",
+    },
+    {
+        text: $t({defaultMessage: "/task_post (Post content to web)"}),
+        name: "task_post",
+    },
+];
+
 export const slash_commands_admin_project = [
     {
         text: $t({defaultMessage: "/project_activate (Activate project)"}),
@@ -494,6 +513,10 @@ export const slash_commands_admin_project = [
     {
         text: $t({defaultMessage: "/task_note [id]* [delete] [//note]* (Note for task)"}),
         name: "task_note",
+    },
+    {
+        text: $t({defaultMessage: "/task_post (Post content to web)"}),
+        name: "task_post",
     },
     {
         text: $t({defaultMessage: "/test_command (Test command for admin)"}),
@@ -942,6 +965,9 @@ export function get_candidates(query) {
         return commands;
       } else if (compose_state.topic().match("^Kw-.*__.*") && !page_params.is_guest) {
         const commands = slash_commands_keyword;
+        return commands;
+      } else if (compose_state.topic().match("^project-content.*") && page_params.is_guest) {
+        const commands = slash_commands_project_content;
         return commands;
       } else if (compose_state.topic().match("^project-.*") && page_params.is_guest) {
         const commands = slash_commands_project;
