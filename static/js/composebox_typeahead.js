@@ -551,6 +551,29 @@ export const slash_commands_admin_webpage = [
     },
 ];
 
+export const slash_commands_admin_accounting = [
+    {
+        text: $t({defaultMessage: "/accounting_closing_term (Summary earning and new term of tasks)"}),
+        name: "accounting_closing_term",
+    },
+    {
+        text: $t({defaultMessage: "/accounting_deposit [vnd_number]* //comment (Deposit for increase account)"}),
+        name: "accounting_deposit",
+    },
+    {
+        text: $t({defaultMessage: "/accounting_miscellaneous [project_id]* [vnd_fee]* //comment (Set miscellaneous fee for project)"}),
+        name: "accounting_miscellaneous",
+    },
+    {
+        text: $t({defaultMessage: "/accounting_request (Request for payment)"}),
+        name: "accounting_request",
+    },
+    {
+        text: $t({defaultMessage: "/accounting_withdrawal [vnd_number]* //comment (Withdrawal money from account to decrease)"}),
+        name: "accounting_withdrawal",
+    },
+];
+
 export const slash_commands = [
     {
         text: $t({defaultMessage: "/dark (Toggle night mode)"}),
@@ -610,26 +633,6 @@ export const slash_commands_admin = [
     {
         text: $t({defaultMessage: "/todo (Create a todo list)"}),
         name: "todo",
-    },
-    {
-        text: $t({defaultMessage: "/accounting_closing_term (Summary earning and new term of tasks)"}),
-        name: "accounting_closing_term",
-    },
-    {
-        text: $t({defaultMessage: "/accounting_deposit [vnd_number]* //comment (Deposit for increase account)"}),
-        name: "accounting_deposit",
-    },
-    {
-        text: $t({defaultMessage: "/accounting_miscellaneous [project_id]* [vnd_fee]* //comment (Set miscellaneous fee for project)"}),
-        name: "accounting_miscellaneous",
-    },
-    {
-        text: $t({defaultMessage: "/accounting_request (Request for payment)"}),
-        name: "accounting_request",
-    },
-    {
-        text: $t({defaultMessage: "/accounting_withdrawal [vnd_number]* //comment (Withdrawal money from account to decrease)"}),
-        name: "accounting_withdrawal",
     },
     {
         text: $t({defaultMessage: "/archive (Archive stream and close)"}),
@@ -959,6 +962,9 @@ export function get_candidates(query) {
       if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^Kw-.*__.*")) {
         const commands = slash_commands_admin_keyword;
         return commands;
+      } else if ((page_params.is_admin || page_params.is_moderator) && (compose_state.topic() == "billing" || compose_state.topic() == "payment")) {
+        const commands = slash_commands_admin_accounting;
+        return commands;
       } else if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^Webpage__.*")) {
         const commands = slash_commands_admin_webpage;
         return commands;
@@ -968,8 +974,8 @@ export function get_candidates(query) {
       } else if (page_params.is_admin || page_params.is_moderator) {
         const commands = slash_commands_admin;
         return commands;
-      } else if (compose_state.topic() == "Chat" && !page_params.is_guest) {
-        const commands = slash_commands_chat;
+      } else if (compose_state.topic() == "workflow" && !page_params.is_guest) {
+        const commands = slash_commands_workflow;
         return commands;
       } else if (compose_state.topic().match("^Kw-.*__.*") && !page_params.is_guest) {
         const commands = slash_commands_keyword;
@@ -980,8 +986,8 @@ export function get_candidates(query) {
       } else if (compose_state.topic().match("^project-.*") && page_params.is_guest) {
         const commands = slash_commands_project;
         return commands;
-      } else if (compose_state.topic() == "workflow" && !page_params.is_guest) {
-        const commands = slash_commands_workflow;
+      } else if (compose_state.topic() == "Chat" && !page_params.is_guest) {
+        const commands = slash_commands_chat;
         return commands;
       } else {
         const commands = slash_commands;
