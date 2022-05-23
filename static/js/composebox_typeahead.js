@@ -515,7 +515,7 @@ export const slash_commands_admin_webpage = [
         name: "webpage_hosting",
     },
     {
-        text: $t({defaultMessage: "/webpage_import [post/page/product*] [old_link*] (Import from other webpage)"}),
+        text: $t({defaultMessage: "/webpage_import [post/page/product]* [old_link]* (Import from other webpage)"}),
         name: "webpage_import",
     },
 ];
