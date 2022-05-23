@@ -488,6 +488,10 @@ export const slash_commands_admin_project = [
         name: "sk_comment",
     },
     {
+        text: $t({defaultMessage: "/task_check [id]* (Check task for work quality)"}),
+        name: "task_check",
+    },
+    {
         text: $t({defaultMessage: "/task_note [id*] [delete] [//note*] (Note in task)"}),
         name: "task_note",
     },
