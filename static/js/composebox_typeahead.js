@@ -511,7 +511,7 @@ export const slash_commands_admin_webpage = [
         name: "webpage_activate",
     },
     {
-        text: $t({defaultMessage: "/webpage_hosting [create/remove*] (Create/remove hosting of webpage)"}),
+        text: $t({defaultMessage: "/webpage_hosting [create/remove]* (Create/remove hosting of webpage)"}),
         name: "webpage_hosting",
     },
     {
