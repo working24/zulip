@@ -401,6 +401,69 @@ export const slash_commands_workflow = [
     },
 ];
 
+export const slash_commands_admin_workflow = [
+    {
+        text: $t({defaultMessage: "/archive (Archive stream and close)"}),
+        name: "archive",
+    },
+    {
+        text: $t({defaultMessage: "/finish_task (Finish task of work)"}),
+        name: "finish_task",
+    },
+    {
+        text: $t({defaultMessage: "/fix_editor (Fix editor to classic)"}),
+        name: "fix_editor",
+    },
+    {
+        text: $t({defaultMessage: "/get_task (Get task for work)"}),
+        name: "get_task",
+    },
+    {
+        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
+        name: "sk",
+    },
+    {
+        text: $t({defaultMessage: "/sk_comment [comment]* (Comment to all tasks in project)"}),
+        name: "sk_comment",
+    },
+    {
+        text: $t({defaultMessage: "/team_accept (Accept new member)"}),
+        name: "team_accept",
+    },
+    {
+        text: $t({defaultMessage: "/team_exit //Reason (Exit action for member from workflow)"}),
+        name: "team_exit",
+    },
+    {
+        text: $t({defaultMessage: "/team_level [level]* //comment (Set level for member)"}),
+        name: "team_level",
+    },
+    {
+        text: $t({defaultMessage: "/team_merge [new_stream_id]* (Merge stream, account, email to new one for member)"}),
+        name: "team_merge",
+    },
+    {
+        text: $t({defaultMessage: "/team_set `[payment/retain]* [value]* (Set payment, retain for member)"}),
+        name: "team_set",
+    },
+    {
+        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
+        name: "test_command",
+    },
+    {
+        text: $t({defaultMessage: "/summary (Summary your work)"}),
+        name: "summary",
+    },
+    {
+        text: $t({defaultMessage: "/work_cancel [work_link]* `[edit] //comment_for_member (Cancel work of member)"}),
+        name: "work_cancel",
+    },
+    {
+        text: $t({defaultMessage: "/work_check [quantity]* (Check work of member)"}),
+        name: "work_check",
+    },
+];
+
 export const slash_commands_keyword = [
     {
         text: $t({defaultMessage: "/keyword_link [keyword]* [link]* (Set page link of keyword)"}),
@@ -639,18 +702,6 @@ export const slash_commands_admin = [
         name: "archive",
     },
     {
-        text: $t({defaultMessage: "/finish_task (Finish task of work)"}),
-        name: "finish_task",
-    },
-    {
-        text: $t({defaultMessage: "/fix_editor (Fix editor to classic)"}),
-        name: "fix_editor",
-    },
-    {
-        text: $t({defaultMessage: "/get_task (Get task for work)"}),
-        name: "get_task",
-    },
-    {
         text: $t({defaultMessage: "/new_content (Create new content request)"}),
         name: "new_content",
     },
@@ -677,10 +728,6 @@ export const slash_commands_admin = [
     {
         text: $t({defaultMessage: "/sk_set `[department:hr/support]* `[type:email/phone]* [contact_details:dan.nt@working24.net/0916666888]* (Set stream to contact list)"}),
         name: "sk_set",
-    },
-    {
-        text: $t({defaultMessage: "/summary (Summary your work)"}),
-        name: "summary",
     },
     {
         text: $t({defaultMessage: "/team_accept (Accept new member)"}),
@@ -961,6 +1008,9 @@ export function get_candidates(query) {
     function get_slash_commands_data() {
       if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^Kw-.*__.*")) {
         const commands = slash_commands_admin_keyword;
+        return commands;
+      } else if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic() == "workflow") {
+        const commands = slash_commands_admin_workflow;
         return commands;
       } else if ((page_params.is_admin || page_params.is_moderator) && (compose_state.topic() == "billing" || compose_state.topic() == "payment")) {
         const commands = slash_commands_admin_accounting;
