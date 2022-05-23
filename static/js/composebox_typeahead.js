@@ -635,6 +635,10 @@ export const slash_commands_admin_accounting = [
         text: $t({defaultMessage: "/accounting_withdrawal [vnd_number]* //comment (Withdrawal money from account to decrease)"}),
         name: "accounting_withdrawal",
     },
+    {
+        text: $t({defaultMessage: "/archive (Archive stream and close)"}),
+        name: "archive",
+    },
 ];
 
 export const slash_commands = [
