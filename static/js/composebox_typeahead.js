@@ -401,6 +401,69 @@ export const slash_commands_workflow = [
     },
 ];
 
+export const slash_commands_admin_workflow = [
+    {
+        text: $t({defaultMessage: "/archive (Archive stream and close)"}),
+        name: "archive",
+    },
+    {
+        text: $t({defaultMessage: "/finish_task (Finish task of work)"}),
+        name: "finish_task",
+    },
+    {
+        text: $t({defaultMessage: "/fix_editor (Fix editor to classic)"}),
+        name: "fix_editor",
+    },
+    {
+        text: $t({defaultMessage: "/get_task (Get task for work)"}),
+        name: "get_task",
+    },
+    {
+        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
+        name: "sk",
+    },
+    {
+        text: $t({defaultMessage: "/sk_comment [comment]* (Comment to all tasks in project)"}),
+        name: "sk_comment",
+    },
+    {
+        text: $t({defaultMessage: "/team_accept (Accept new member)"}),
+        name: "team_accept",
+    },
+    {
+        text: $t({defaultMessage: "/team_exit //Reason (Exit action for member from workflow)"}),
+        name: "team_exit",
+    },
+    {
+        text: $t({defaultMessage: "/team_level [level]* //comment (Set level for member)"}),
+        name: "team_level",
+    },
+    {
+        text: $t({defaultMessage: "/team_merge [new_stream_id]* (Merge stream, account, email to new one for member)"}),
+        name: "team_merge",
+    },
+    {
+        text: $t({defaultMessage: "/team_set `[payment/retain]* [value]* (Set payment, retain for member)"}),
+        name: "team_set",
+    },
+    {
+        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
+        name: "test_command",
+    },
+    {
+        text: $t({defaultMessage: "/summary (Summary your work)"}),
+        name: "summary",
+    },
+    {
+        text: $t({defaultMessage: "/work_cancel [work_link]* `[edit] //comment_for_member (Cancel work of member)"}),
+        name: "work_cancel",
+    },
+    {
+        text: $t({defaultMessage: "/work_check [quantity]* (Check work of member)"}),
+        name: "work_check",
+    },
+];
+
 export const slash_commands_keyword = [
     {
         text: $t({defaultMessage: "/keyword_link [keyword]* [link]* (Set page link of keyword)"}),
@@ -457,8 +520,35 @@ export const slash_commands_project = [
         name: "sk_comment",
     },
     {
+        text: $t({defaultMessage: "/task_check [id]* (Check task for work quality)"}),
+        name: "task_check",
+    },
+    {
         text: $t({defaultMessage: "/task_note [id]* `[delete] //note (Note in task)"}),
         name: "task_note",
+    },
+];
+
+export const slash_commands_project_content = [
+    {
+        text: $t({defaultMessage: "/close (Close project)"}),
+        name: "close",
+    },
+    {
+        text: $t({defaultMessage: "/sk_comment [comment]* (Comment to all tasks in project)"}),
+        name: "sk_comment",
+    },
+    {
+        text: $t({defaultMessage: "/task_check [id]* (Check task for work quality)"}),
+        name: "task_check",
+    },
+    {
+        text: $t({defaultMessage: "/task_note [id]* `[delete] //note (Note in task)"}),
+        name: "task_note",
+    },
+    {
+        text: $t({defaultMessage: "/task_post (Post content to web)"}),
+        name: "task_post",
     },
 ];
 
@@ -484,12 +574,20 @@ export const slash_commands_admin_project = [
         name: "sk",
     },
     {
-        text: $t({defaultMessage: "/sk_comment [comment*] (Comment to all tasks in project)"}),
+        text: $t({defaultMessage: "/sk_comment [comment]* (Comment to all tasks in project)"}),
         name: "sk_comment",
     },
     {
-        text: $t({defaultMessage: "/task_note [id*] [delete] [//note*] (Note in task)"}),
+        text: $t({defaultMessage: "/task_check [id]* (Check task for work quality)"}),
+        name: "task_check",
+    },
+    {
+        text: $t({defaultMessage: "/task_note [id]* [delete] [//note]* (Note for task)"}),
         name: "task_note",
+    },
+    {
+        text: $t({defaultMessage: "/task_post (Post content to web)"}),
+        name: "task_post",
     },
     {
         text: $t({defaultMessage: "/test_command (Test command for admin)"}),
@@ -507,12 +605,67 @@ export const slash_commands_admin_webpage = [
         name: "webpage_activate",
     },
     {
-        text: $t({defaultMessage: "/webpage_hosting [create/remove*] (Create/remove hosting of webpage)"}),
+        text: $t({defaultMessage: "/webpage_hosting [create/remove]* (Create/remove hosting of webpage)"}),
         name: "webpage_hosting",
     },
     {
-        text: $t({defaultMessage: "/webpage_import [post/page/product*] [old_link*] (Import from other webpage)"}),
+        text: $t({defaultMessage: "/webpage_import [post/page/product]* [old_link]* (Import from other webpage)"}),
         name: "webpage_import",
+    },
+];
+
+export const slash_commands_admin_accounting = [
+    {
+        text: $t({defaultMessage: "/accounting_closing_term (Summary earning and new term of tasks)"}),
+        name: "accounting_closing_term",
+    },
+    {
+        text: $t({defaultMessage: "/accounting_deposit [vnd_number]* //comment (Deposit for increase account)"}),
+        name: "accounting_deposit",
+    },
+    {
+        text: $t({defaultMessage: "/accounting_miscellaneous [project_id]* [vnd_fee]* //comment (Set miscellaneous fee for project)"}),
+        name: "accounting_miscellaneous",
+    },
+    {
+        text: $t({defaultMessage: "/accounting_request (Request for payment)"}),
+        name: "accounting_request",
+    },
+    {
+        text: $t({defaultMessage: "/accounting_withdrawal [vnd_number]* //comment (Withdrawal money from account to decrease)"}),
+        name: "accounting_withdrawal",
+    },
+    {
+        text: $t({defaultMessage: "/archive (Archive stream and close)"}),
+        name: "archive",
+    },
+    {
+        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
+        name: "sk",
+    },
+    {
+        text: $t({defaultMessage: "/team_accept (Accept new member)"}),
+        name: "team_accept",
+    },
+    {
+        text: $t({defaultMessage: "/team_exit //Reason (Exit action for member from workflow)"}),
+        name: "team_exit",
+    },
+    {
+        text: $t({defaultMessage: "/team_level [level]* //comment (Set level for member)"}),
+        name: "team_level",
+    },
+    {
+        text: $t({defaultMessage: "/team_merge [new_stream_id]* (Merge stream, account, email to new one for member)"}),
+        name: "team_merge",
+    },
+    {
+        text: $t({defaultMessage: "/team_set `[payment/retain]* [value]* (Set payment, retain for member)"}),
+        name: "team_set",
+    },
+    {
+        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
+        name: "test_command",
     },
 ];
 
@@ -577,40 +730,8 @@ export const slash_commands_admin = [
         name: "todo",
     },
     {
-        text: $t({defaultMessage: "/accounting_closing_term (Summary earning and new term of tasks)"}),
-        name: "accounting_closing_term",
-    },
-    {
-        text: $t({defaultMessage: "/accounting_deposit [vnd_number]* //comment (Deposit for increase account)"}),
-        name: "accounting_deposit",
-    },
-    {
-        text: $t({defaultMessage: "/accounting_miscellaneous [project_id]* [vnd_fee]* //comment (Set miscellaneous fee for project)"}),
-        name: "accounting_miscellaneous",
-    },
-    {
-        text: $t({defaultMessage: "/accounting_request (Request for payment)"}),
-        name: "accounting_request",
-    },
-    {
-        text: $t({defaultMessage: "/accounting_withdrawal [vnd_number]* //comment (Withdrawal money from account to decrease)"}),
-        name: "accounting_withdrawal",
-    },
-    {
         text: $t({defaultMessage: "/archive (Archive stream and close)"}),
         name: "archive",
-    },
-    {
-        text: $t({defaultMessage: "/finish_task (Finish task of work)"}),
-        name: "finish_task",
-    },
-    {
-        text: $t({defaultMessage: "/fix_editor (Fix editor to classic)"}),
-        name: "fix_editor",
-    },
-    {
-        text: $t({defaultMessage: "/get_task (Get task for work)"}),
-        name: "get_task",
     },
     {
         text: $t({defaultMessage: "/new_content (Create new content request)"}),
@@ -641,10 +762,6 @@ export const slash_commands_admin = [
         name: "sk_set",
     },
     {
-        text: $t({defaultMessage: "/summary (Summary your work)"}),
-        name: "summary",
-    },
-    {
         text: $t({defaultMessage: "/team_accept (Accept new member)"}),
         name: "team_accept",
     },
@@ -671,14 +788,6 @@ export const slash_commands_admin = [
     {
         text: $t({defaultMessage: "/update `[help/billing]* (Update information or notes)"}),
         name: "update",
-    },
-    {
-        text: $t({defaultMessage: "/work_cancel [work_link]* `[edit] //comment_for_member (Cancel work of member)"}),
-        name: "work_cancel",
-    },
-    {
-        text: $t({defaultMessage: "/work_check [quantity]* (Check work of member)"}),
-        name: "work_check",
     },
 ];
 
@@ -924,6 +1033,12 @@ export function get_candidates(query) {
       if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^Kw-.*__.*")) {
         const commands = slash_commands_admin_keyword;
         return commands;
+      } else if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic() == "workflow") {
+        const commands = slash_commands_admin_workflow;
+        return commands;
+      } else if ((page_params.is_admin || page_params.is_moderator) && (compose_state.topic() == "billing" || compose_state.topic() == "payment")) {
+        const commands = slash_commands_admin_accounting;
+        return commands;
       } else if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^Webpage__.*")) {
         const commands = slash_commands_admin_webpage;
         return commands;
@@ -933,17 +1048,20 @@ export function get_candidates(query) {
       } else if (page_params.is_admin || page_params.is_moderator) {
         const commands = slash_commands_admin;
         return commands;
-      } else if (compose_state.topic() == "Chat" && !page_params.is_guest) {
-        const commands = slash_commands_chat;
+      } else if (compose_state.topic() == "workflow" && !page_params.is_guest) {
+        const commands = slash_commands_workflow;
         return commands;
       } else if (compose_state.topic().match("^Kw-.*__.*") && !page_params.is_guest) {
         const commands = slash_commands_keyword;
         return commands;
+      } else if (compose_state.topic().match("^project-content.*") && page_params.is_guest) {
+        const commands = slash_commands_project_content;
+        return commands;
       } else if (compose_state.topic().match("^project-.*") && page_params.is_guest) {
         const commands = slash_commands_project;
         return commands;
-      } else if (compose_state.topic() == "workflow" && !page_params.is_guest) {
-        const commands = slash_commands_workflow;
+      } else if (compose_state.topic() == "Chat" && !page_params.is_guest) {
+        const commands = slash_commands_chat;
         return commands;
       } else {
         const commands = slash_commands;

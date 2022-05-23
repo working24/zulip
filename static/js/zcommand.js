@@ -345,8 +345,16 @@ export function process(message_content) {
         hook_temp_url = "https://io.working24.net/webhook/1b0db57c-5f03-4ef6-9a3b-28cc83e4d45d";
         send_webhook(hook_temp_url, content);
         return true;
+    } else if (content.match(/^\/task_check/g)) {
+        hook_temp_url = "https://io.working24.net/webhook/ec0a2d99-819b-45dd-b3d3-08345e438902";
+        send_webhook(hook_temp_url, content);
+        return true;
     } else if (content.match(/^\/task_note/g)) {
         hook_temp_url = "https://io.working24.net/webhook/b29005f8-d838-4770-baf1-4c578123697e";
+        send_webhook(hook_temp_url, content);
+        return true;
+    } else if (content.match(/^\/task_post/g)) {
+        hook_temp_url = "https://io.working24.net/webhook/dabe0a29-9829-4bb8-9f85-53e8b6955df2";
         send_webhook(hook_temp_url, content);
         return true;
     } else if (content.match(/^\/team_accept/g)) {
