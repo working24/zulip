@@ -643,6 +643,30 @@ export const slash_commands_admin_accounting = [
         text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
         name: "sk",
     },
+    {
+        text: $t({defaultMessage: "/team_accept (Accept new member)"}),
+        name: "team_accept",
+    },
+    {
+        text: $t({defaultMessage: "/team_exit //Reason (Exit action for member from workflow)"}),
+        name: "team_exit",
+    },
+    {
+        text: $t({defaultMessage: "/team_level [level]* //comment (Set level for member)"}),
+        name: "team_level",
+    },
+    {
+        text: $t({defaultMessage: "/team_merge [new_stream_id]* (Merge stream, account, email to new one for member)"}),
+        name: "team_merge",
+    },
+    {
+        text: $t({defaultMessage: "/team_set `[payment/retain]* [value]* (Set payment, retain for member)"}),
+        name: "team_set",
+    },
+    {
+        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
+        name: "test_command",
+    },
 ];
 
 export const slash_commands = [
