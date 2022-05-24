@@ -1036,7 +1036,7 @@ export function get_candidates(query) {
       } else if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic() == "workflow") {
         const commands = slash_commands_admin_workflow;
         return commands;
-      } else if ((page_params.is_admin || page_params.is_moderator) && (compose_state.topic() == "billing" || compose_state.topic() == "payment")) {
+      } else if ((page_params.is_admin || page_params.is_moderator) && (compose_state.topic() == "billing" || compose_state.topic() == "payment") || compose_state.topic().match("^request.*")) {
         const commands = slash_commands_admin_accounting;
         return commands;
       } else if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^Webpage__.*")) {
