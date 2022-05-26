@@ -554,10 +554,6 @@ export const slash_commands_project_content = [
 
 export const slash_commands_admin_project = [
     {
-        text: $t({defaultMessage: "/project_activate (Activate project)"}),
-        name: "project_activate",
-    },
-    {
         text: $t({defaultMessage: "/close (Close project)"}),
         name: "close",
     },
@@ -638,6 +634,10 @@ export const slash_commands_admin_accounting = [
     {
         text: $t({defaultMessage: "/archive (Archive stream and close)"}),
         name: "archive",
+    },
+    {
+        text: $t({defaultMessage: "/project_activate (Activate project)"}),
+        name: "project_activate",
     },
     {
         text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
