@@ -466,6 +466,10 @@ export const slash_commands_admin_workflow = [
 
 export const slash_commands_keyword = [
     {
+        text: $t({defaultMessage: "/keyword_add_content [keyword]* #title* [title]* //Note (Add content for keyword)"}),
+        name: "keyword_add_content",
+    },
+    {
         text: $t({defaultMessage: "/keyword_link [keyword]* #link* [link]* (Set page link of keyword)"}),
         name: "keyword_link",
     },
@@ -484,6 +488,10 @@ export const slash_commands_keyword = [
 ];
 
 export const slash_commands_admin_keyword = [
+    {
+        text: $t({defaultMessage: "/keyword_add_content [keyword]* #title* [title]* //Note (Add content for keyword)"}),
+        name: "keyword_add_content",
+    },
     {
         text: $t({defaultMessage: "/keyword_link [keyword]* #link* [link]* (Set page link of keyword)"}),
         name: "keyword_link",
