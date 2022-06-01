@@ -377,7 +377,7 @@ function should_show_custom_query(query, items) {
 
 export const slash_commands_chat = [
     {
-        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk #(email/sms) [message]* (Send message to email/sms)"}),
         name: "sk",
     },
 ];
@@ -419,7 +419,7 @@ export const slash_commands_admin_workflow = [
         name: "get_task",
     },
     {
-        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk #(email/sms) [message]* (Send message to email/sms)"}),
         name: "sk",
     },
     {
@@ -574,7 +574,7 @@ export const slash_commands_admin_project = [
         name: "project_set",
     },
     {
-        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk #(email/sms) [message]* (Send message to email/sms)"}),
         name: "sk",
     },
     {
@@ -609,7 +609,7 @@ export const slash_commands_admin_webpage = [
         name: "project_cancel",
     },
     {
-        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk #(email/sms) [message]* (Send message to email/sms)"}),
         name: "sk",
     },
     {
@@ -656,7 +656,7 @@ export const slash_commands_admin_accounting = [
         name: "project_activate",
     },
     {
-        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk #(email/sms) [message]* (Send message to email/sms)"}),
         name: "sk",
     },
     {
@@ -766,7 +766,7 @@ export const slash_commands_admin = [
         name: "notify_disable",
     },
     {
-        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk #(email/sms) [message]* (Send message to email/sms)"}),
         name: "sk",
     },
     {
@@ -774,7 +774,7 @@ export const slash_commands_admin = [
         name: "sk_info",
     },
     {
-        text: $t({defaultMessage: "/sk_set `[department:hr/support]* `[type:email/phone]* [contact_details:dan.nt@working24.net/0916666888]* (Set stream to contact list)"}),
+        text: $t({defaultMessage: "/sk_set #(hr/support)* #(email/phone)* [email/phone]* (Set stream to contact list)"}),
         name: "sk_set",
     },
     {
