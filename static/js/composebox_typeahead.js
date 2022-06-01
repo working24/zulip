@@ -605,10 +605,6 @@ export const slash_commands_admin_webpage = [
         name: "test_command",
     },
     {
-        text: $t({defaultMessage: "/webpage_activate (Activate webpage)"}),
-        name: "webpage_activate",
-    },
-    {
         text: $t({defaultMessage: "/webpage_hosting [create/remove]* (Create/remove hosting of webpage)"}),
         name: "webpage_hosting",
     },
