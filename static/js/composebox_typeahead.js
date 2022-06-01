@@ -601,6 +601,18 @@ export const slash_commands_admin_project = [
 
 export const slash_commands_admin_webpage = [
     {
+        text: $t({defaultMessage: "/close (Close project)"}),
+        name: "close",
+    },
+    {
+        text: $t({defaultMessage: "/project_cancel [project_id] //Reason of cancellation (Cancel project)"}),
+        name: "project_cancel",
+    },
+    {
+        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
+        name: "sk",
+    },
+    {
         text: $t({defaultMessage: "/test_command (Test command for admin)"}),
         name: "test_command",
     },
@@ -1043,7 +1055,7 @@ export function get_candidates(query) {
       } else if ((page_params.is_admin || page_params.is_moderator) && (compose_state.topic() == "billing" || compose_state.topic() == "payment") || compose_state.topic().match("^request.*")) {
         const commands = slash_commands_admin_accounting;
         return commands;
-      } else if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^Webpage__.*")) {
+      } else if ((page_params.is_admin || page_params.is_moderator) && (compose_state.topic().match("^Webpage__.*") || compose_state.topic().match("^project-webpage.*"))) {
         const commands = slash_commands_admin_webpage;
         return commands;
       } else if ((page_params.is_admin || page_params.is_moderator) && (compose_state.topic().match("^project-.*") || compose_state.topic().match("^request-.*"))) {
