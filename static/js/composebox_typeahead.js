@@ -377,7 +377,7 @@ function should_show_custom_query(query, items) {
 
 export const slash_commands_chat = [
     {
-        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk #(email/sms) [message]* (Send message to email/sms)"}),
         name: "sk",
     },
 ];
@@ -419,7 +419,7 @@ export const slash_commands_admin_workflow = [
         name: "get_task",
     },
     {
-        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk #(email/sms) [message]* (Send message to email/sms)"}),
         name: "sk",
     },
     {
@@ -574,7 +574,7 @@ export const slash_commands_admin_project = [
         name: "project_set",
     },
     {
-        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk #(email/sms) [message]* (Send message to email/sms)"}),
         name: "sk",
     },
     {
@@ -601,12 +601,24 @@ export const slash_commands_admin_project = [
 
 export const slash_commands_admin_webpage = [
     {
+        text: $t({defaultMessage: "/close (Close project)"}),
+        name: "close",
+    },
+    {
+        text: $t({defaultMessage: "/project_cancel [project_id] //Reason of cancellation (Cancel project)"}),
+        name: "project_cancel",
+    },
+    {
+        text: $t({defaultMessage: "/sk #(email/sms) [message]* (Send message to email/sms)"}),
+        name: "sk",
+    },
+    {
         text: $t({defaultMessage: "/test_command (Test command for admin)"}),
         name: "test_command",
     },
     {
-        text: $t({defaultMessage: "/webpage_activate (Activate webpage)"}),
-        name: "webpage_activate",
+        text: $t({defaultMessage: "/webpage_domain [domain]* (Add domain to webpage)"}),
+        name: "webpage_domain",
     },
     {
         text: $t({defaultMessage: "/webpage_hosting [create/remove]* (Create/remove hosting of webpage)"}),
@@ -648,7 +660,7 @@ export const slash_commands_admin_accounting = [
         name: "project_activate",
     },
     {
-        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk #(email/sms) [message]* (Send message to email/sms)"}),
         name: "sk",
     },
     {
@@ -758,7 +770,7 @@ export const slash_commands_admin = [
         name: "notify_disable",
     },
     {
-        text: $t({defaultMessage: "/sk `[email/sms] [message]* (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk #(email/sms) [message]* (Send message to email/sms)"}),
         name: "sk",
     },
     {
@@ -766,7 +778,7 @@ export const slash_commands_admin = [
         name: "sk_info",
     },
     {
-        text: $t({defaultMessage: "/sk_set `[department:hr/support]* `[type:email/phone]* [contact_details:dan.nt@working24.net/0916666888]* (Set stream to contact list)"}),
+        text: $t({defaultMessage: "/sk_set #(hr/support)* #(email/phone)* [email/phone]* (Set stream to contact list)"}),
         name: "sk_set",
     },
     {
@@ -1047,7 +1059,7 @@ export function get_candidates(query) {
       } else if ((page_params.is_admin || page_params.is_moderator) && (compose_state.topic() == "billing" || compose_state.topic() == "payment") || compose_state.topic().match("^request.*")) {
         const commands = slash_commands_admin_accounting;
         return commands;
-      } else if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^Webpage__.*")) {
+      } else if ((page_params.is_admin || page_params.is_moderator) && (compose_state.topic().match("^Webpage__.*") || compose_state.topic().match("^project-webpage.*"))) {
         const commands = slash_commands_admin_webpage;
         return commands;
       } else if ((page_params.is_admin || page_params.is_moderator) && (compose_state.topic().match("^project-.*") || compose_state.topic().match("^request-.*"))) {
