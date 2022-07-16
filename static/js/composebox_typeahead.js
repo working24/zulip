@@ -455,7 +455,7 @@ export const slash_commands_admin_workflow = [
         name: "summary",
     },
     {
-        text: $t({defaultMessage: "/work_cancel [work_link]* `[edit] //comment_for_member (Cancel work of member)"}),
+        text: $t({defaultMessage: "/work_cancel [work_link]* #edit //comment_for_member (Cancel work of member)"}),
         name: "work_cancel",
     },
     {
