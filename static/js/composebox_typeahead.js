@@ -617,6 +617,10 @@ export const slash_commands_admin_webpage = [
         name: "test_command",
     },
     {
+        text: $t({defaultMessage: "/webpage_change #[id]* [value]* (Change something on webpage)"}),
+        name: "webpage_change",
+    },
+    {
         text: $t({defaultMessage: "/webpage_domain [domain]* (Add domain to webpage)"}),
         name: "webpage_domain",
     },
