@@ -570,7 +570,7 @@ export const slash_commands_admin_project = [
         name: "project_cancel",
     },
     {
-        text: $t({defaultMessage: "/project_set [level/priority/speed] [value] (Project set level, priority, speed)"}),
+        text: $t({defaultMessage: "/project_set #[level/priority/speed]* [value]* (Project set level, priority, speed)"}),
         name: "project_set",
     },
     {
@@ -617,15 +617,19 @@ export const slash_commands_admin_webpage = [
         name: "test_command",
     },
     {
+        text: $t({defaultMessage: "/webpage_change #[id]* [value]* (Change something on webpage)"}),
+        name: "webpage_change",
+    },
+    {
         text: $t({defaultMessage: "/webpage_domain [domain]* (Add domain to webpage)"}),
         name: "webpage_domain",
     },
     {
-        text: $t({defaultMessage: "/webpage_hosting [create/remove]* (Create/remove hosting of webpage)"}),
+        text: $t({defaultMessage: "/webpage_hosting #[create/remove]* (Create/remove hosting of webpage)"}),
         name: "webpage_hosting",
     },
     {
-        text: $t({defaultMessage: "/webpage_import [post/page/product]* [old_link]* (Import from other webpage)"}),
+        text: $t({defaultMessage: "/webpage_import #[post/page/product]* [old_link]* (Import from other webpage)"}),
         name: "webpage_import",
     },
 ];
