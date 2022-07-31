@@ -377,7 +377,7 @@ function should_show_custom_query(query, items) {
 
 export const slash_commands_chat = [
     {
-        text: $t({defaultMessage: "/sk #(email/sms) [message]* (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk #[email/sms] [message]* (Send message to email/sms)"}),
         name: "sk",
     },
 ];
@@ -419,7 +419,7 @@ export const slash_commands_admin_workflow = [
         name: "get_task",
     },
     {
-        text: $t({defaultMessage: "/sk #(email/sms) [message]* (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk #[email/sms] [message]* (Send message to email/sms)"}),
         name: "sk",
     },
     {
@@ -443,7 +443,7 @@ export const slash_commands_admin_workflow = [
         name: "team_merge",
     },
     {
-        text: $t({defaultMessage: "/team_set `[payment/retain]* [value]* (Set payment, retain for member)"}),
+        text: $t({defaultMessage: "/team_set #[payment/retain]* [value]* (Set payment, retain for member)"}),
         name: "team_set",
     },
     {
@@ -574,7 +574,7 @@ export const slash_commands_admin_project = [
         name: "project_set",
     },
     {
-        text: $t({defaultMessage: "/sk #(email/sms) [message]* (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk #[email/sms] [message]* (Send message to email/sms)"}),
         name: "sk",
     },
     {
@@ -609,7 +609,7 @@ export const slash_commands_admin_webpage = [
         name: "project_cancel",
     },
     {
-        text: $t({defaultMessage: "/sk #(email/sms) [message]* (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk #[email/sms] [message]* (Send message to email/sms)"}),
         name: "sk",
     },
     {
@@ -664,7 +664,7 @@ export const slash_commands_admin_accounting = [
         name: "project_activate",
     },
     {
-        text: $t({defaultMessage: "/sk #(email/sms) [message]* (Send message to email/sms)"}),
+        text: $t({defaultMessage: "/sk #[email/sms] [message]* (Send message to email/sms)"}),
         name: "sk",
     },
     {
@@ -684,7 +684,7 @@ export const slash_commands_admin_accounting = [
         name: "team_merge",
     },
     {
-        text: $t({defaultMessage: "/team_set `[payment/retain]* [value]* (Set payment, retain for member)"}),
+        text: $t({defaultMessage: "/team_set #[payment/retain]* [value]* (Set payment, retain for member)"}),
         name: "team_set",
     },
     {
@@ -762,7 +762,7 @@ export const slash_commands_admin = [
         name: "new_content",
     },
     {
-        text: $t({defaultMessage: "/new_smart `[tab]* [tab_name]* `[web] [web_domain] (Create new smart sheet request)"}),
+        text: $t({defaultMessage: "/new_smart (Create new smart sheet request)"}),
         name: "new_smart",
     },
     {
@@ -782,7 +782,7 @@ export const slash_commands_admin = [
         name: "sk_info",
     },
     {
-        text: $t({defaultMessage: "/sk_set #(hr/support)* #(email/phone)* [email/phone]* (Set stream to contact list)"}),
+        text: $t({defaultMessage: "/sk_set #[hr/support]* #[email/phone]* [email/phone]* (Set stream to contact list)"}),
         name: "sk_set",
     },
     {
@@ -802,7 +802,7 @@ export const slash_commands_admin = [
         name: "team_merge",
     },
     {
-        text: $t({defaultMessage: "/team_set `[payment/retain]* [value]* (Set payment, retain for member)"}),
+        text: $t({defaultMessage: "/team_set #[payment/retain]* [value]* (Set payment, retain for member)"}),
         name: "team_set",
     },
     {
@@ -810,7 +810,7 @@ export const slash_commands_admin = [
         name: "test_command",
     },
     {
-        text: $t({defaultMessage: "/update `[help/billing]* (Update information or notes)"}),
+        text: $t({defaultMessage: "/update #[help/billing]* (Update information or notes)"}),
         name: "update",
     },
 ];
