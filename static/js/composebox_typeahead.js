@@ -489,8 +489,12 @@ export const slash_commands_keyword = [
 
 export const slash_commands_admin_keyword = [
     {
-        text: $t({defaultMessage: "/keyword_article [keyword]* #title* [title]* //Note (Add content for keyword)"}),
-        name: "keyword_add_content",
+        text: $t({defaultMessage: "/add_content [title]* #[keyword] [keyword] //Note (Add content for keyword)"}),
+        name: "add_content",
+    },
+    {
+        text: $t({defaultMessage: "/add_keyword [keyword]* #[group] [keyword_group] #[content] [content_id] //Note (Add keyword for article)"}),
+        name: "add_keyword",
     },
     {
         text: $t({defaultMessage: "/keyword_link [keyword]* #link* [link]* (Set page link of keyword)"}),
@@ -554,10 +558,6 @@ export const slash_commands_project_content = [
         text: $t({defaultMessage: "/task_note [id]* #[delete] //note (Note in task)"}),
         name: "task_note",
     },
-    {
-        text: $t({defaultMessage: "/task_post (Post content to web)"}),
-        name: "task_post",
-    },
 ];
 
 export const slash_commands_admin_project = [
@@ -590,7 +590,7 @@ export const slash_commands_admin_project = [
         name: "task_note",
     },
     {
-        text: $t({defaultMessage: "/task_post (Post content to web)"}),
+        text: $t({defaultMessage: "/task_post [post_link]* (Post content to web)"}),
         name: "task_post",
     },
     {
