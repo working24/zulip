@@ -493,6 +493,10 @@ export const slash_commands_admin_keyword = [
         name: "add_content",
     },
     {
+        text: $t({defaultMessage: "/add_keyword [keyword]* #[group] [keyword_group] #[content] [content_id] //Note (Add keyword for article)"}),
+        name: "add_keyword",
+    },
+    {
         text: $t({defaultMessage: "/keyword_link [keyword]* #link* [link]* (Set page link of keyword)"}),
         name: "keyword_link",
     },

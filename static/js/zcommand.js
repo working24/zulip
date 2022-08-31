@@ -253,6 +253,14 @@ export function process(message_content) {
         hook_temp_url = "https://io.working24.net/webhook/4c67ac3c-bcda-4d1e-8999-8ce1b8464fe1";
         send_webhook(hook_temp_url, content);
         return true;
+    } else if (content.match(/^\/add_content/g)) {
+        hook_temp_url = "https://io.working24.net/webhook/5e0724bd-7ea5-4858-b633-5666cc24b0e4";
+        send_webhook(hook_temp_url, content);
+        return true;
+    } else if (content.match(/^\/add_keyword/g)) {
+        hook_temp_url = "https://io.working24.net/webhook/1cda90c7-2eca-4448-9e78-e969b9ac27ee";
+        send_webhook(hook_temp_url, content);
+        return true;
     } else if (content.match(/^\/archive/g)) {
         hook_temp_url = "https://io.working24.net/webhook/4aa0e344-1961-4f7f-8186-927fa41d954f";
         send_webhook(hook_temp_url, content);
@@ -275,10 +283,6 @@ export function process(message_content) {
         return true;
     } else if (content.match(/^\/invite/g)) {
         hook_temp_url = "https://io.working24.net/webhook/4f5b6544-e37f-4da0-9e82-cf9be90f7307";
-        send_webhook(hook_temp_url, content);
-        return true;
-    } else if (content.match(/^\/keyword_article/g)) {
-        hook_temp_url = "https://io.working24.net/webhook/5e0724bd-7ea5-4858-b633-5666cc24b0e4";
         send_webhook(hook_temp_url, content);
         return true;
     } else if (content.match(/^\/keyword_link/g)) {
