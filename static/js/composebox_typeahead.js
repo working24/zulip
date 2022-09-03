@@ -590,7 +590,7 @@ export const slash_commands_admin_project = [
         name: "task_note",
     },
     {
-        text: $t({defaultMessage: "/task_post [post_link]* (Post content to web)"}),
+        text: $t({defaultMessage: "/task_post [id]* (Post content to web)"}),
         name: "task_post",
     },
     {
