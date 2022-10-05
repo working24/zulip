@@ -382,6 +382,13 @@ export const slash_commands_chat = [
     },
 ];
 
+export const slash_commands_admin_comment = [
+    {
+        text: $t({defaultMessage: "/unapprove [comment_link]* //Note or reason (Unapprove comment)"}),
+        name: "unapprove",
+    },
+];
+
 export const slash_commands_workflow = [
     {
         text: $t({defaultMessage: "/finish_task (Confirm to finish task)"}),
@@ -1054,7 +1061,10 @@ export function get_candidates(query) {
     }
 
     function get_slash_commands_data() {
-      if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^Kw-.*__.*")) {
+      if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic() == "comment") {
+        const commands = slash_commands_admin_comment;
+        return commands;
+      } else if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^Kw-.*__.*")) {
         const commands = slash_commands_admin_keyword;
         return commands;
       } else if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic() == "workflow") {
