@@ -565,6 +565,10 @@ export const slash_commands_project_content = [
         text: $t({defaultMessage: "/task_note [id]* #[delete] //note (Note in task)"}),
         name: "task_note",
     },
+    {
+        text: $t({defaultMessage: "/task_post [id]* (Post content to web)"}),
+        name: "task_post",
+    },
 ];
 
 export const slash_commands_admin_project = [
