@@ -488,10 +488,6 @@ export const slash_commands_admin = [
         name: "team_set",
     },
     {
-        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
-        name: "test_command",
-    },
-    {
         text: $t({defaultMessage: "/update #[help/billing]* (Update information or notes)"}),
         name: "update",
     },
@@ -550,10 +546,6 @@ export const slash_commands_admin_accounting = [
         text: $t({defaultMessage: "/team_set #[payment/retain]* [value]* (Set payment, retain for member)"}),
         name: "team_set",
     },
-    {
-        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
-        name: "test_command",
-    },
 ];
 
 export const slash_commands_admin_billing = [
@@ -599,10 +591,6 @@ export const slash_commands_admin_keyword = [
         text: $t({defaultMessage: "/keyword_update (Update new keywords list for SMART)"}),
         name: "keyword_update",
     },
-    {
-        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
-        name: "test_command",
-    },
 ];
 
 export const slash_commands_admin_project = [
@@ -638,10 +626,6 @@ export const slash_commands_admin_project = [
         text: $t({defaultMessage: "/task_post [id]* (Post content to web)"}),
         name: "task_post",
     },
-    {
-        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
-        name: "test_command",
-    },
 ];
 
 export const slash_commands_admin_webpage = [
@@ -656,10 +640,6 @@ export const slash_commands_admin_webpage = [
     {
         text: $t({defaultMessage: "/sk #[email/sms] [message]* (Send message to email/sms)"}),
         name: "sk",
-    },
-    {
-        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
-        name: "test_command",
     },
     {
         text: $t({defaultMessage: "/webpage_change #[id]* [value]* (Change something on webpage)"}),
@@ -723,10 +703,6 @@ export const slash_commands_admin_workflow = [
     {
         text: $t({defaultMessage: "/team_set #[payment/retain]* [value]* (Set payment, retain for member)"}),
         name: "team_set",
-    },
-    {
-        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
-        name: "test_command",
     },
     {
         text: $t({defaultMessage: "/summary (Summary your work)"}),
@@ -830,6 +806,14 @@ export const slash_commands_workflow = [
     {
         text: $t({defaultMessage: "/summary (Summary your work)"}),
         name: "summary",
+    },
+];
+
+// Add test command
+export const slash_commands_test = [
+    {
+        text: $t({defaultMessage: "/test_command (Test command for developer)"}),
+        name: "test_command",
     },
 ];
 
@@ -1073,46 +1057,46 @@ export function get_candidates(query) {
 
     function get_slash_commands_data() {
       if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic() == "comment") {
-        const commands = slash_commands_admin_comment;
+        const commands = slash_commands_admin_comment.concat(slash_commands_test);
         return commands;
       } else if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^Kw-.*__.*")) {
-        const commands = slash_commands_admin_keyword;
+        const commands = slash_commands_admin_keyword.concat(slash_commands_test);
         return commands;
       } else if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic() == "workflow") {
-        const commands = slash_commands_admin_workflow;
+        const commands = slash_commands_admin_workflow.concat(slash_commands_test);
         return commands;
       } else if ((page_params.is_admin || page_params.is_moderator) && (compose_state.topic() == "billing" || compose_state.topic() == "payment") || compose_state.topic().match("^request.*")) {
-        const commands = slash_commands_admin_accounting;
+        const commands = slash_commands_admin_accounting.concat(slash_commands_test);
         return commands;
       } else if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^recurring.*")) {
-        const commands = slash_commands_admin_billing;
+        const commands = slash_commands_admin_billing.concat(slash_commands_test);
         return commands;
       } else if ((page_params.is_admin || page_params.is_moderator) && (compose_state.topic().match("^Webpage__.*") || compose_state.topic().match("^project-webpage.*"))) {
-        const commands = slash_commands_admin_webpage;
+        const commands = slash_commands_admin_webpage.concat(slash_commands_test);
         return commands;
       } else if ((page_params.is_admin || page_params.is_moderator) && (compose_state.topic().match("^project-.*") || compose_state.topic().match("^request-.*"))) {
-        const commands = slash_commands_admin_project;
+        const commands = slash_commands_admin_project.concat(slash_commands_test);
         return commands;
       } else if (page_params.is_admin || page_params.is_moderator) {
-        const commands = slash_commands_admin;
+        const commands = slash_commands_admin.concat(slash_commands_test);
         return commands;
       } else if (compose_state.topic() == "workflow" && !page_params.is_guest) {
-        const commands = slash_commands_workflow;
+        const commands = slash_commands_workflow.concat(slash_commands_test);
         return commands;
       } else if (compose_state.topic().match("^Kw-.*__.*") && !page_params.is_guest) {
-        const commands = slash_commands_keyword;
+        const commands = slash_commands_keyword.concat(slash_commands_test);
         return commands;
       } else if (compose_state.topic().match("^project-content.*") && page_params.is_guest) {
-        const commands = slash_commands_project_content;
+        const commands = slash_commands_project_content.concat(slash_commands_test);
         return commands;
       } else if (compose_state.topic().match("^project-.*") && page_params.is_guest) {
-        const commands = slash_commands_project;
+        const commands = slash_commands_project.concat(slash_commands_test);
         return commands;
       } else if (compose_state.topic() == "Chat" && !page_params.is_guest) {
-        const commands = slash_commands_chat;
+        const commands = slash_commands_chat.concat(slash_commands_test);
         return commands;
       } else {
-        const commands = slash_commands;
+        const commands = slash_commands.concat(slash_commands_test);
         return commands;
       }
     }
