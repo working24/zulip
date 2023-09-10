@@ -389,7 +389,7 @@ export function process(message_content) {
         hook_temp_url = "https://io.working24.net/webhook/dfee4a7d-f13e-4bea-a097-be916dd427d7";
         send_webhook(hook_temp_url, content);
         return true;
-    } else if (content.match(/^\/test_command/g)) {
+    } else if (content.match(/^\/test/g)) {
         hook_temp_url = "https://io.working24.net/webhook-test/6fda4fa6-77f2-41a9-a0d3-3c37ac2a8e91";
         send_webhook(hook_temp_url, content);
         return true;

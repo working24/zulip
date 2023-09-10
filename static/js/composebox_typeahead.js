@@ -812,8 +812,8 @@ export const slash_commands_workflow = [
 // Add test command
 export const slash_commands_test = [
     {
-        text: $t({defaultMessage: "/test_command (Test command for developer)"}),
-        name: "test_command",
+        text: $t({defaultMessage: "/test (Test command for developer)"}),
+        name: "test",
     },
 ];
 
