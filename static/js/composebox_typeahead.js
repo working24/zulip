@@ -375,335 +375,6 @@ function should_show_custom_query(query, items) {
     return !matched;
 }
 
-export const slash_commands_chat = [
-    {
-        text: $t({defaultMessage: "/sk #[email/sms] [message]* (Send message to email/sms)"}),
-        name: "sk",
-    },
-];
-
-export const slash_commands_admin_comment = [
-    {
-        text: $t({defaultMessage: "/unapprove [comment_link]* //Note or reason (Unapprove comment)"}),
-        name: "unapprove",
-    },
-];
-
-export const slash_commands_workflow = [
-    {
-        text: $t({defaultMessage: "/finish_task (Confirm to finish task)"}),
-        name: "finish_task",
-    },
-    {
-        text: $t({defaultMessage: "/fix_editor (Fix editor to classic)"}),
-        name: "fix_editor",
-    },
-    {
-        text: $t({defaultMessage: "/get_task (Get task for work)"}),
-        name: "get_task",
-    },
-    {
-        text: $t({defaultMessage: "/summary (Summary your work)"}),
-        name: "summary",
-    },
-];
-
-export const slash_commands_admin_workflow = [
-    {
-        text: $t({defaultMessage: "/archive (Archive stream and close)"}),
-        name: "archive",
-    },
-    {
-        text: $t({defaultMessage: "/finish_task (Finish task of work)"}),
-        name: "finish_task",
-    },
-    {
-        text: $t({defaultMessage: "/fix_editor (Fix editor to classic)"}),
-        name: "fix_editor",
-    },
-    {
-        text: $t({defaultMessage: "/get_task (Get task for work)"}),
-        name: "get_task",
-    },
-    {
-        text: $t({defaultMessage: "/sk #[email/sms] [message]* (Send message to email/sms)"}),
-        name: "sk",
-    },
-    {
-        text: $t({defaultMessage: "/sk_comment [comment]* (Comment to all tasks in project)"}),
-        name: "sk_comment",
-    },
-    {
-        text: $t({defaultMessage: "/team_accept (Accept new member)"}),
-        name: "team_accept",
-    },
-    {
-        text: $t({defaultMessage: "/team_exit //Reason (Exit action for member from workflow)"}),
-        name: "team_exit",
-    },
-    {
-        text: $t({defaultMessage: "/team_level [level]* //comment (Set level for member)"}),
-        name: "team_level",
-    },
-    {
-        text: $t({defaultMessage: "/team_merge [new_stream_id]* (Merge stream, account, email to new one for member)"}),
-        name: "team_merge",
-    },
-    {
-        text: $t({defaultMessage: "/team_set #[payment/retain]* [value]* (Set payment, retain for member)"}),
-        name: "team_set",
-    },
-    {
-        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
-        name: "test_command",
-    },
-    {
-        text: $t({defaultMessage: "/summary (Summary your work)"}),
-        name: "summary",
-    },
-    {
-        text: $t({defaultMessage: "/work_cancel [work_link]* #edit //comment_for_member (Cancel work of member)"}),
-        name: "work_cancel",
-    },
-    {
-        text: $t({defaultMessage: "/work_check [quantity]* (Check work of member)"}),
-        name: "work_check",
-    },
-];
-
-export const slash_commands_keyword = [
-    {
-        text: $t({defaultMessage: "/keyword_article [keyword]* #title* [title]* //Note (Add content for keyword)"}),
-        name: "keyword_add_content",
-    },
-    {
-        text: $t({defaultMessage: "/keyword_link [keyword]* #link* [link]* (Set page link of keyword)"}),
-        name: "keyword_link",
-    },
-    {
-        text: $t({defaultMessage: "/keyword_negative [keyword]* (Set negative keyword)"}),
-        name: "keyword_negative",
-    },
-    {
-        text: $t({defaultMessage: "/keyword_seed [keyword]* #type [type] (Set keyword seed for SMART)"}),
-        name: "keyword_seed",
-    },
-    {
-        text: $t({defaultMessage: "/keyword_update (Update new keywords list for SMART)"}),
-        name: "keyword_update",
-    },
-];
-
-export const slash_commands_admin_keyword = [
-    {
-        text: $t({defaultMessage: "/add_content [title]* #[keyword] [keyword] //Note (Add content for keyword)"}),
-        name: "add_content",
-    },
-    {
-        text: $t({defaultMessage: "/add_keyword [keyword]* #[group] [keyword_group] #[content] [content_id] //Note (Add keyword for article)"}),
-        name: "add_keyword",
-    },
-    {
-        text: $t({defaultMessage: "/keyword_link [keyword]* #link* [link]* (Set page link of keyword)"}),
-        name: "keyword_link",
-    },
-    {
-        text: $t({defaultMessage: "/keyword_negative [keyword]* (Set negative keyword)"}),
-        name: "keyword_negative",
-    },
-    {
-        text: $t({defaultMessage: "/keyword_seed [keyword]* #type [type] (Set keyword seed for SMART)"}),
-        name: "keyword_seed",
-    },
-    {
-        text: $t({defaultMessage: "/keyword_submit [keywords_list]* #subject* [subject]* #type* [type]* #seed* [seed_keyword]* (Submit new keywords to database)"}),
-        name: "keyword_submit",
-    },
-    {
-        text: $t({defaultMessage: "/keyword_update (Update new keywords list for SMART)"}),
-        name: "keyword_update",
-    },
-    {
-        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
-        name: "test_command",
-    },
-];
-
-export const slash_commands_project = [
-    {
-        text: $t({defaultMessage: "/close (Close project)"}),
-        name: "close",
-    },
-    {
-        text: $t({defaultMessage: "/sk_comment [comment]* (Comment to all tasks in project)"}),
-        name: "sk_comment",
-    },
-    {
-        text: $t({defaultMessage: "/task_check [id]* (Check task for work quality)"}),
-        name: "task_check",
-    },
-    {
-        text: $t({defaultMessage: "/task_note [id]* `[delete] //note (Note in task)"}),
-        name: "task_note",
-    },
-];
-
-export const slash_commands_project_content = [
-    {
-        text: $t({defaultMessage: "/close (Close project)"}),
-        name: "close",
-    },
-    {
-        text: $t({defaultMessage: "/sk_comment [comment]* (Comment to all tasks in project)"}),
-        name: "sk_comment",
-    },
-    {
-        text: $t({defaultMessage: "/task_check [id]* (Check task for work quality)"}),
-        name: "task_check",
-    },
-    {
-        text: $t({defaultMessage: "/task_note [id]* #[delete] //note (Note in task)"}),
-        name: "task_note",
-    },
-    {
-        text: $t({defaultMessage: "/task_post [id]* (Post content to web)"}),
-        name: "task_post",
-    },
-];
-
-export const slash_commands_admin_project = [
-    {
-        text: $t({defaultMessage: "/close (Close project)"}),
-        name: "close",
-    },
-    {
-        text: $t({defaultMessage: "/project_cancel [project_id] //Reason of cancellation (Cancel project)"}),
-        name: "project_cancel",
-    },
-    {
-        text: $t({defaultMessage: "/project_set #[level/priority/speed]* [value]* (Project set level, priority, speed)"}),
-        name: "project_set",
-    },
-    {
-        text: $t({defaultMessage: "/sk #[email/sms] [message]* (Send message to email/sms)"}),
-        name: "sk",
-    },
-    {
-        text: $t({defaultMessage: "/sk_comment [comment]* (Comment to all tasks in project)"}),
-        name: "sk_comment",
-    },
-    {
-        text: $t({defaultMessage: "/task_check [id]* (Check task for work quality)"}),
-        name: "task_check",
-    },
-    {
-        text: $t({defaultMessage: "/task_note [id]* #[delete] //note (Note for task)"}),
-        name: "task_note",
-    },
-    {
-        text: $t({defaultMessage: "/task_post [id]* (Post content to web)"}),
-        name: "task_post",
-    },
-    {
-        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
-        name: "test_command",
-    },
-];
-
-export const slash_commands_admin_webpage = [
-    {
-        text: $t({defaultMessage: "/close (Close project)"}),
-        name: "close",
-    },
-    {
-        text: $t({defaultMessage: "/project_cancel [project_id] //Reason of cancellation (Cancel project)"}),
-        name: "project_cancel",
-    },
-    {
-        text: $t({defaultMessage: "/sk #[email/sms] [message]* (Send message to email/sms)"}),
-        name: "sk",
-    },
-    {
-        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
-        name: "test_command",
-    },
-    {
-        text: $t({defaultMessage: "/webpage_change #[id]* [value]* (Change something on webpage)"}),
-        name: "webpage_change",
-    },
-    {
-        text: $t({defaultMessage: "/webpage_domain [domain]* (Add domain to webpage)"}),
-        name: "webpage_domain",
-    },
-    {
-        text: $t({defaultMessage: "/webpage_hosting #[create/remove]* (Create/remove hosting of webpage)"}),
-        name: "webpage_hosting",
-    },
-    {
-        text: $t({defaultMessage: "/webpage_import #[post/page/product]* [old_link]* (Import from other webpage)"}),
-        name: "webpage_import",
-    },
-];
-
-export const slash_commands_admin_accounting = [
-    {
-        text: $t({defaultMessage: "/accounting_closing_term (Summary earning and new term of tasks)"}),
-        name: "accounting_closing_term",
-    },
-    {
-        text: $t({defaultMessage: "/accounting_deposit [vnd_number]* //comment (Deposit for increase account)"}),
-        name: "accounting_deposit",
-    },
-    {
-        text: $t({defaultMessage: "/accounting_miscellaneous [project_id]* [vnd_fee]* //comment (Set miscellaneous fee for project)"}),
-        name: "accounting_miscellaneous",
-    },
-    {
-        text: $t({defaultMessage: "/accounting_request (Request for payment)"}),
-        name: "accounting_request",
-    },
-    {
-        text: $t({defaultMessage: "/accounting_withdrawal [vnd_number]* //comment (Withdrawal money from account to decrease)"}),
-        name: "accounting_withdrawal",
-    },
-    {
-        text: $t({defaultMessage: "/archive (Archive stream and close)"}),
-        name: "archive",
-    },
-    {
-        text: $t({defaultMessage: "/project_activate (Activate project)"}),
-        name: "project_activate",
-    },
-    {
-        text: $t({defaultMessage: "/sk #[email/sms] [message]* (Send message to email/sms)"}),
-        name: "sk",
-    },
-    {
-        text: $t({defaultMessage: "/team_accept (Accept new member)"}),
-        name: "team_accept",
-    },
-    {
-        text: $t({defaultMessage: "/team_exit //Reason (Exit action for member from workflow)"}),
-        name: "team_exit",
-    },
-    {
-        text: $t({defaultMessage: "/team_level [level]* //comment (Set level for member)"}),
-        name: "team_level",
-    },
-    {
-        text: $t({defaultMessage: "/team_merge [new_stream_id]* (Merge stream, account, email to new one for member)"}),
-        name: "team_merge",
-    },
-    {
-        text: $t({defaultMessage: "/team_set #[payment/retain]* [value]* (Set payment, retain for member)"}),
-        name: "team_set",
-    },
-    {
-        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
-        name: "test_command",
-    },
-];
-
 export const slash_commands = [
     {
         text: $t({defaultMessage: "/dark (Toggle night mode)"}),
@@ -823,6 +494,342 @@ export const slash_commands_admin = [
     {
         text: $t({defaultMessage: "/update #[help/billing]* (Update information or notes)"}),
         name: "update",
+    },
+];
+
+export const slash_commands_admin_accounting = [
+    {
+        text: $t({defaultMessage: "/accounting_closing_term (Summary earning and new term of tasks)"}),
+        name: "accounting_closing_term",
+    },
+    {
+        text: $t({defaultMessage: "/accounting_deposit [vnd_number]* //comment (Deposit for increase account)"}),
+        name: "accounting_deposit",
+    },
+    {
+        text: $t({defaultMessage: "/accounting_miscellaneous [project_id]* [vnd_fee]* //comment (Set miscellaneous fee for project)"}),
+        name: "accounting_miscellaneous",
+    },
+    {
+        text: $t({defaultMessage: "/accounting_request (Request for payment)"}),
+        name: "accounting_request",
+    },
+    {
+        text: $t({defaultMessage: "/accounting_withdrawal [vnd_number]* //comment (Withdrawal money from account to decrease)"}),
+        name: "accounting_withdrawal",
+    },
+    {
+        text: $t({defaultMessage: "/archive (Archive stream and close)"}),
+        name: "archive",
+    },
+    {
+        text: $t({defaultMessage: "/project_activate (Activate project)"}),
+        name: "project_activate",
+    },
+    {
+        text: $t({defaultMessage: "/sk #[email/sms] [message]* (Send message to email/sms)"}),
+        name: "sk",
+    },
+    {
+        text: $t({defaultMessage: "/team_accept (Accept new member)"}),
+        name: "team_accept",
+    },
+    {
+        text: $t({defaultMessage: "/team_exit //Reason (Exit action for member from workflow)"}),
+        name: "team_exit",
+    },
+    {
+        text: $t({defaultMessage: "/team_level [level]* //comment (Set level for member)"}),
+        name: "team_level",
+    },
+    {
+        text: $t({defaultMessage: "/team_merge [new_stream_id]* (Merge stream, account, email to new one for member)"}),
+        name: "team_merge",
+    },
+    {
+        text: $t({defaultMessage: "/team_set #[payment/retain]* [value]* (Set payment, retain for member)"}),
+        name: "team_set",
+    },
+    {
+        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
+        name: "test_command",
+    },
+];
+
+export const slash_commands_admin_billing = [
+    {
+        text: $t({defaultMessage: "/billing_paid (Billing paid confirm)"}),
+        name: "billing_paid",
+    },
+];
+  
+export const slash_commands_admin_comment = [
+    {
+        text: $t({defaultMessage: "/unapprove [comment_link]* //Note or reason (Unapprove comment)"}),
+        name: "unapprove",
+    },
+];
+
+export const slash_commands_admin_keyword = [
+    {
+        text: $t({defaultMessage: "/add_content [title]* #[keyword] [keyword] //Note (Add content for keyword)"}),
+        name: "add_content",
+    },
+    {
+        text: $t({defaultMessage: "/add_keyword [keyword]* #[group] [keyword_group] #[content] [content_id] //Note (Add keyword for article)"}),
+        name: "add_keyword",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_link [keyword]* #link* [link]* (Set page link of keyword)"}),
+        name: "keyword_link",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_negative [keyword]* (Set negative keyword)"}),
+        name: "keyword_negative",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_seed [keyword]* #type [type] (Set keyword seed for SMART)"}),
+        name: "keyword_seed",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_submit [keywords_list]* #subject* [subject]* #type* [type]* #seed* [seed_keyword]* (Submit new keywords to database)"}),
+        name: "keyword_submit",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_update (Update new keywords list for SMART)"}),
+        name: "keyword_update",
+    },
+    {
+        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
+        name: "test_command",
+    },
+];
+
+export const slash_commands_admin_project = [
+    {
+        text: $t({defaultMessage: "/close (Close project)"}),
+        name: "close",
+    },
+    {
+        text: $t({defaultMessage: "/project_cancel [project_id] //Reason of cancellation (Cancel project)"}),
+        name: "project_cancel",
+    },
+    {
+        text: $t({defaultMessage: "/project_set #[level/priority/speed]* [value]* (Project set level, priority, speed)"}),
+        name: "project_set",
+    },
+    {
+        text: $t({defaultMessage: "/sk #[email/sms] [message]* (Send message to email/sms)"}),
+        name: "sk",
+    },
+    {
+        text: $t({defaultMessage: "/sk_comment [comment]* (Comment to all tasks in project)"}),
+        name: "sk_comment",
+    },
+    {
+        text: $t({defaultMessage: "/task_check [id]* (Check task for work quality)"}),
+        name: "task_check",
+    },
+    {
+        text: $t({defaultMessage: "/task_note [id]* #[delete] //note (Note for task)"}),
+        name: "task_note",
+    },
+    {
+        text: $t({defaultMessage: "/task_post [id]* (Post content to web)"}),
+        name: "task_post",
+    },
+    {
+        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
+        name: "test_command",
+    },
+];
+
+export const slash_commands_admin_webpage = [
+    {
+        text: $t({defaultMessage: "/close (Close project)"}),
+        name: "close",
+    },
+    {
+        text: $t({defaultMessage: "/project_cancel [project_id] //Reason of cancellation (Cancel project)"}),
+        name: "project_cancel",
+    },
+    {
+        text: $t({defaultMessage: "/sk #[email/sms] [message]* (Send message to email/sms)"}),
+        name: "sk",
+    },
+    {
+        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
+        name: "test_command",
+    },
+    {
+        text: $t({defaultMessage: "/webpage_change #[id]* [value]* (Change something on webpage)"}),
+        name: "webpage_change",
+    },
+    {
+        text: $t({defaultMessage: "/webpage_domain [domain]* (Add domain to webpage)"}),
+        name: "webpage_domain",
+    },
+    {
+        text: $t({defaultMessage: "/webpage_hosting #[create/remove]* (Create/remove hosting of webpage)"}),
+        name: "webpage_hosting",
+    },
+    {
+        text: $t({defaultMessage: "/webpage_import #[post/page/product]* [old_link]* (Import from other webpage)"}),
+        name: "webpage_import",
+    },
+];
+
+export const slash_commands_admin_workflow = [
+    {
+        text: $t({defaultMessage: "/archive (Archive stream and close)"}),
+        name: "archive",
+    },
+    {
+        text: $t({defaultMessage: "/finish_task (Finish task of work)"}),
+        name: "finish_task",
+    },
+    {
+        text: $t({defaultMessage: "/fix_editor (Fix editor to classic)"}),
+        name: "fix_editor",
+    },
+    {
+        text: $t({defaultMessage: "/get_task (Get task for work)"}),
+        name: "get_task",
+    },
+    {
+        text: $t({defaultMessage: "/sk #[email/sms] [message]* (Send message to email/sms)"}),
+        name: "sk",
+    },
+    {
+        text: $t({defaultMessage: "/sk_comment [comment]* (Comment to all tasks in project)"}),
+        name: "sk_comment",
+    },
+    {
+        text: $t({defaultMessage: "/team_accept (Accept new member)"}),
+        name: "team_accept",
+    },
+    {
+        text: $t({defaultMessage: "/team_exit //Reason (Exit action for member from workflow)"}),
+        name: "team_exit",
+    },
+    {
+        text: $t({defaultMessage: "/team_level [level]* //comment (Set level for member)"}),
+        name: "team_level",
+    },
+    {
+        text: $t({defaultMessage: "/team_merge [new_stream_id]* (Merge stream, account, email to new one for member)"}),
+        name: "team_merge",
+    },
+    {
+        text: $t({defaultMessage: "/team_set #[payment/retain]* [value]* (Set payment, retain for member)"}),
+        name: "team_set",
+    },
+    {
+        text: $t({defaultMessage: "/test_command (Test command for admin)"}),
+        name: "test_command",
+    },
+    {
+        text: $t({defaultMessage: "/summary (Summary your work)"}),
+        name: "summary",
+    },
+    {
+        text: $t({defaultMessage: "/work_cancel [work_link]* #edit //comment_for_member (Cancel work of member)"}),
+        name: "work_cancel",
+    },
+    {
+        text: $t({defaultMessage: "/work_check [quantity]* (Check work of member)"}),
+        name: "work_check",
+    },
+];
+
+export const slash_commands_chat = [
+    {
+        text: $t({defaultMessage: "/sk #[email/sms] [message]* (Send message to email/sms)"}),
+        name: "sk",
+    },
+];
+
+export const slash_commands_keyword = [
+    {
+        text: $t({defaultMessage: "/keyword_article [keyword]* #title* [title]* //Note (Add content for keyword)"}),
+        name: "keyword_add_content",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_link [keyword]* #link* [link]* (Set page link of keyword)"}),
+        name: "keyword_link",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_negative [keyword]* (Set negative keyword)"}),
+        name: "keyword_negative",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_seed [keyword]* #type [type] (Set keyword seed for SMART)"}),
+        name: "keyword_seed",
+    },
+    {
+        text: $t({defaultMessage: "/keyword_update (Update new keywords list for SMART)"}),
+        name: "keyword_update",
+    },
+];
+
+export const slash_commands_project = [
+    {
+        text: $t({defaultMessage: "/close (Close project)"}),
+        name: "close",
+    },
+    {
+        text: $t({defaultMessage: "/sk_comment [comment]* (Comment to all tasks in project)"}),
+        name: "sk_comment",
+    },
+    {
+        text: $t({defaultMessage: "/task_check [id]* (Check task for work quality)"}),
+        name: "task_check",
+    },
+    {
+        text: $t({defaultMessage: "/task_note [id]* `[delete] //note (Note in task)"}),
+        name: "task_note",
+    },
+];
+
+export const slash_commands_project_content = [
+    {
+        text: $t({defaultMessage: "/close (Close project)"}),
+        name: "close",
+    },
+    {
+        text: $t({defaultMessage: "/sk_comment [comment]* (Comment to all tasks in project)"}),
+        name: "sk_comment",
+    },
+    {
+        text: $t({defaultMessage: "/task_check [id]* (Check task for work quality)"}),
+        name: "task_check",
+    },
+    {
+        text: $t({defaultMessage: "/task_note [id]* #[delete] //note (Note in task)"}),
+        name: "task_note",
+    },
+    {
+        text: $t({defaultMessage: "/task_post [id]* (Post content to web)"}),
+        name: "task_post",
+    },
+];
+
+export const slash_commands_workflow = [
+    {
+        text: $t({defaultMessage: "/finish_task (Confirm to finish task)"}),
+        name: "finish_task",
+    },
+    {
+        text: $t({defaultMessage: "/fix_editor (Fix editor to classic)"}),
+        name: "fix_editor",
+    },
+    {
+        text: $t({defaultMessage: "/get_task (Get task for work)"}),
+        name: "get_task",
+    },
+    {
+        text: $t({defaultMessage: "/summary (Summary your work)"}),
+        name: "summary",
     },
 ];
 
@@ -1076,6 +1083,9 @@ export function get_candidates(query) {
         return commands;
       } else if ((page_params.is_admin || page_params.is_moderator) && (compose_state.topic() == "billing" || compose_state.topic() == "payment") || compose_state.topic().match("^request.*")) {
         const commands = slash_commands_admin_accounting;
+        return commands;
+      } else if ((page_params.is_admin || page_params.is_moderator) && compose_state.topic().match("^recurring.*")) {
+        const commands = slash_commands_admin_billing;
         return commands;
       } else if ((page_params.is_admin || page_params.is_moderator) && (compose_state.topic().match("^Webpage__.*") || compose_state.topic().match("^project-webpage.*"))) {
         const commands = slash_commands_admin_webpage;

@@ -265,6 +265,10 @@ export function process(message_content) {
         hook_temp_url = "https://io.working24.net/webhook/4aa0e344-1961-4f7f-8186-927fa41d954f";
         send_webhook(hook_temp_url, content);
         return true;
+    } else if (content.match(/^\/billing_paid/g)) {
+        hook_temp_url = "https://io.working24.net/webhook/be8a5c3c-076a-457c-a54a-81eb821ea9de";
+        send_webhook(hook_temp_url, content);
+        return true;
     } else if (content.match(/^\/close/g)) {
         hook_temp_url = "https://io.working24.net/webhook/94d1e498-2970-463d-b782-3c897d52503f";
         send_webhook(hook_temp_url, content);
